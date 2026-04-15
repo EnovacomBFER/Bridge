@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts - Guide D&#39;implementation Bridge v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+     <link href="assets/css/myTemplate.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+     <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.enovacom.com">
+               <img height="50" alt="Visit MyProject" src="assets/images/Enovacom_logo_horizontal_baseline_color@3x.jpg" />
+          </a>
+     </div>
+     <div id="family-nav">
+          <a id="family-logo" no-external="true" href="https://hl7.org/fhir/R4/index.html">
+               <img height="50" alt="Visit MyProject" src="assets/images/fhir-logo-www.png" />
+          </a>
+     </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide D&#39;implementation Bridge</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - trial-use
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li>
+    <a href="documentation.html">Documentation générale</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentation des services API Editeurs
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authentification.html">Authentification</a>
+      </li>
+      <li>
+        <a href="modeleEditeurGet.html">Requête FHIR</a>
+      </li>
+      <li>
+        <a href="modeleEditeurAbo.html">Abonnement</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentation des services API Etablissement
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="modeleEtab.html">Envoi</a>
+      </li>
+      <li>
+        Reception
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="other.html">Téléchargement</a>
+      </li>
+      <li>
+        <a href="https://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a href="https://hl7.fr/ig/fhir/core/">FR Core</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guide D'implementation Bridge - version de développement local (intégration continue v1.1.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://enovacom.org/fhir/bridge/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Behavior: Search Parameters</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#4">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Behavior: Search Parameters </h3>
+    <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-appointment-actor-identifier.html"
+                  title="SearchParameter/appointment-actor-identifier">appointment-actor-identifier</a>
+            </td>
+            <td>
+<p>Paramètre de recherche pour récupérer une ressource Appointment par la salle de réalisation de l'acte du rendez-vous.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-encounter-location-identifier.html"
+                  title="SearchParameter/encounter-location-identifier">encounter-location-identifier</a>
+            </td>
+            <td>
+<p>Paramètre de recherche pour récupérer une ressource Encounter par l'identifiant métier de la location (Unité d'hébergement ou de responsabilité médicale).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-patient-creation-date.html"
+                  title="SearchParameter/patient-creation-date">patient-creation-date</a>
+            </td>
+            <td>
+<p>Paramètre de recherche pour récupérer une ressource Patient par sa date de création.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-appointment-enovacom-bridge.html"
+                  title="StructureDefinition/appointment-enovacom-bridge">Enovacom Bridge Appointment Profile</a>
+            </td>
+            <td>
+<p>Profil de la ressource Appointment pour la France. Ce profil ajoute l'opérateur qui a créé/modifié/annulé le RDV. Il permet de référencer un patient, un professionnel de santé, une salle et éventuellement une offre de soins au RDV.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-encounter-visit-enovacom-bridge.html"
+                  title="StructureDefinition/encounter-visit-enovacom-bridge">Enovacom Bridge Encounter Visit Profile</a>
+            </td>
+            <td>
+<p>Ce profil de la ressource Encounter sert à définir la venue dans l'établissement du patient.</p>
+
+<p>L'élément Encounter.location est slicé pour permettre de renseigner l'unité fonctionnelle de responsabilité médicale (UFM) et l'unité fonctionnelle d'hébergement du patient (UFH)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-episodeOfCare-enovacom-bridge.html"
+                  title="StructureDefinition/episodeOfCare-enovacom-bridge">Enovacom Bridge EpisodeOfCare Profile</a>
+            </td>
+            <td>
+<p>Ce profil de la ressource Encounter sert à définir le dossier administratif du patient en lien avec ces différentes venues.
+This profil constrains the Encounter resource to represent the patients administrative file in relation to these different visits.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-patient-enovacom-bridge.html"
+                  title="StructureDefinition/patient-enovacom-bridge">Enovacom Bridge Patient Profile</a>
+            </td>
+            <td>
+<p>Ce profil spécifie les identifiants de patient utilisés par la solution Bridge d'Enovacom. Il utilise des extensions internationales (birthplace et nationalité) et ajoute des extensions propres au contexte d'utilisation de Bridge comme la date de création de l'identité.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-practitioner-enovacom-bridge.html"
+                  title="StructureDefinition/practitioner-enovacom-bridge">Enovacom Bridge Practitioner Profile</a>
+            </td>
+            <td>
+<p>Profil de la ressource Practitionner pour la France. Ce profil contraint les types d'identifiants du professionnel de santé en France.</p>
+
+<p>Ajout d'une slice sur l'identifier pour le code interne practitioner présent dans les messages HL7v2 (code EI).</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PatientCreationDate.html"
+                  title="StructureDefinition/PatientCreationDate">Extension Enovacom Patient Creation Date</a>
+            </td>
+            <td>
+<p>This extension allowos to know the patient's resource creation date .Extension permettant de connaître la date de création de la ressource Patient.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Appointment-AppointmentExample.html"
+                  title="Appointment/AppointmentExample">AppointmentExample</a>
+            </td>
+            <td>
+<p>Un exemple de rendez-vous pour un patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-EncounterVisitExample.html"
+                  title="Encounter/EncounterVisitExample">EncounterVisitExample</a>
+            </td>
+            <td>
+<p>Un exemple de venue ambulatoire pour un patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="EpisodeOfCare-EpisodeOfCareExample.html"
+                  title="EpisodeOfCare/EpisodeOfCareExample">EpisodeOfCareExample</a>
+            </td>
+            <td>
+<p>Un exemple de représentation du dossier administratif</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-1c783afa-9981-4977-be63-8859f0a8fde5.html"
+                  title="Patient/1c783afa-9981-4977-be63-8859f0a8fde5">PatientBridgeExample</a>
+            </td>
+            <td>
+<p>Un exemple de ressource pour un patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-z65g3ad4-4512-4477-biu3-8719haf7d75.html"
+                  title="Practitioner/z65g3ad4-4512-4477-biu3-8719haf7d75">PractitionerBridgeExample01</a>
+            </td>
+            <td>
+<p>Un exemple de ressource pour un professionnel de santé</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-6b70aeba-4024-4cf0-8959-2d1d6cf15597.html"
+                  title="Practitioner/6b70aeba-4024-4cf0-8959-2d1d6cf15597">PractitionerBridgeExample02</a>
+            </td>
+            <td>
+<p>Un exemple de ressource pour un professionnel de santé</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://enovacom.com">Enovacom</a>.  Package EnovacomBridge#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 15, 2026 14:29+0200">2026-04-15</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

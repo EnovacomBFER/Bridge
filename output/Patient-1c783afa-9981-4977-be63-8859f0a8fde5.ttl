@@ -1,0 +1,132 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://enovacom.org/fhir/bridge/Patient/1c783afa-9981-4977-be63-8859f0a8fde5> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "1c783afa-9981-4977-be63-8859f0a8fde5"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"^^xsd:anyURI ;
+       fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient>
+     ] [
+       fhir:v "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-patient"^^xsd:anyURI ;
+       fhir:l <https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-patient>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "fr-FR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr-FR\" lang=\"fr-FR\"><p class=\"res-header-id\"><b>Narratif généré : Patient 1c783afa-9981-4977-be63-8859f0a8fde5</b></p><a name=\"1c783afa-9981-4977-be63-8859f0a8fde5\"> </a><a name=\"hc1c783afa-9981-4977-be63-8859f0a8fde5\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Langue : fr-FR</p><p style=\"margin-bottom: 0px\">Profils: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html\">FR Core Patient Profile</a>, <a href=\"StructureDefinition-patient-enovacom-bridge.html\">Enovacom Bridge Patient Profile</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"> SOLO Yan PEDRO  Male, Date de Naissance :1975-04-19 ( Patient internal identifier: 05560 (use: usual, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"L'enregistrement est actif\">Actif :</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Statut Marital connu du Patient\">Statut Marital :</td><td colspan=\"3\"><span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Noms alternatifs (voir plus bas)\">Nom alternatif :</td><td colspan=\"3\"> SOLO Yan PEDRO (Official)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Moyens de contacter le Patient\">Coordonnées</td><td colspan=\"3\"><ul><li>ph: 04 60 00 02 00(Home)</li><li>[483 RUE DES CARCASSES  CORRELIA 34570 FRA](home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Liens du patient\">Liens :</td><td colspan=\"3\"><ul><li>Organisation gestionnaire: <a href=\"Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8\">Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension allowos to know the patient's resource creation date .Extension permettant de connaître la date de création de la ressource Patient.\"><a href=\"StructureDefinition-PatientCreationDate.html\">Extension Enovacom Patient Creation Date</a></td><td colspan=\"3\">2025-11-27</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-patient-birthPlace.html\">Patient Birth Place</a></td><td colspan=\"3\">FRA </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Reliabilility of the patient's identity | Précision sur le degré de fiabilité de l'identité du patient (si provisoire, validé... avec la justification : quelle type de pièce d'identité ?) avec la méthode de collection\">FR Core Patient Ident Reliability Extension:</td><td colspan=\"3\"><ul><li>identityStatus: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-PROV\">FR Core CodeSystem v2-0445: PROV</a> (Identité provisoire)</li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "https://enovacom.org/fhir/bridge/StructureDefinition/enovacom-patient-creation-date"^^xsd:anyURI ;
+       fhir:l <https://enovacom.org/fhir/bridge/StructureDefinition/enovacom-patient-creation-date>
+     ] ;
+     fhir:value [
+       a fhir:DateTime ;
+       fhir:v "2025-11-27"^^xsd:date
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "identityStatus"^^xsd:anyURI ;
+         fhir:l fhir:identityStatus
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445"^^xsd:anyURI ;
+           fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445>
+         ] ;
+         fhir:code [ fhir:v "PROV" ] ;
+         fhir:display [ fhir:v "Identité provisoire" ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"^^xsd:anyURI ;
+       fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/patient-birthPlace>
+     ] ;
+     fhir:value [
+       a fhir:Address ;
+       fhir:country [ fhir:v "FRA" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "PI" ] ;
+         fhir:display [ fhir:v "Patient internal identifier" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/patient"^^xsd:anyURI ;
+       fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/patient>
+     ] ;
+     fhir:value [ fhir:v "05560" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:text [ fhir:v " SOLO Yan PEDRO " ] ;
+     fhir:family [ fhir:v "SOLO Yan" ] ;
+     fhir:given ( [ fhir:v "PEDRO" ] ) ;
+     fhir:prefix ( [ fhir:v "M" ] )
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:text [ fhir:v " SOLO Yan PEDRO " ] ;
+     fhir:family [ fhir:v "SOLO Yan" ] ;
+     fhir:given ( [ fhir:v "PEDRO" ] ) ;
+     fhir:prefix ( [ fhir:v "M" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "04 60 00 02 00" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1975-04-19"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:text [ fhir:v "[483 RUE DES CARCASSES  CORRELIA 34570 FRA]" ] ;
+     fhir:line ( [ fhir:v "483 RUE DES CARCASSES" ] ) ;
+     fhir:city [ fhir:v "CORRELIA" ] ;
+     fhir:postalCode [ fhir:v "34570" ] ;
+     fhir:country [ fhir:v "FRA" ]
+  ] ) ; # 
+  fhir:maritalStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-MaritalStatus>
+       ] ;
+       fhir:code [ fhir:v "M" ] ;
+       fhir:display [ fhir:v "Married" ]
+     ] )
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:l <https://enovacom.org/fhir/bridge/Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8> ;
+     fhir:reference [ fhir:v "Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8" ] ;
+     fhir:type [
+       fhir:v "Organization"^^xsd:anyURI ;
+       fhir:l fhir:Organization
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

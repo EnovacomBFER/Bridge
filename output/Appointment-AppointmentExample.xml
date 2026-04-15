@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Appointment xmlns="http://hl7.org/fhir">
+  <id value="AppointmentExample"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment"/>
+    <profile value="https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-appointment"/>
+  </meta>
+  <language value="fr-FR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-FR" lang="fr-FR"><p class="res-header-id"><b>Narratif généré : Appointment AppointmentExample</b></p><a name="AppointmentExample"> </a><a name="hcAppointmentExample"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Langue : fr-FR</p><p style="margin-bottom: 0px">Profils: <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-appointment.html">FR Core Appointment Profile</a>, <a href="StructureDefinition-appointment-enovacom-bridge.html">Enovacom Bridge Appointment Profile</a></p></div><p><b>identifier</b>: Identifiant interne/45789465 (utilisation : usual, )</p><p><b>status</b>: Booked</p><p><b>serviceType</b>: <span title="Codes :{https://enovacom.org/ig/fhir/bridge/CodeSystem/enovacom-bridge-appointment-service-type BO222}">FRACTURE DU TIBIA</span></p><p><b>description</b>: FRACTURE DU TIBIA</p><p><b>start</b>: 2025-07-24 23:15:00+0000</p><p><b>end</b>: 2025-07-25 02:15:00+0000</p><p><b>minutesDuration</b>: 180</p><blockquote><p><b>participant</b></p><p><b>actor</b>: Salle (Identifier: <code>http://EnovacomBridge.com/{FinessGeo}/identifiers/location</code>/UNKNOWN (utilisation : usual, ))</p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href="Patient/99a25f60-d947-4b83-ac27-518f1766b96f">Patient/99a25f60-d947-4b83-ac27-518f1766b96f</a></p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href="Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3">Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3</a></p><p><b>status</b>: Accepted</p></blockquote></div>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+        <code value="INTRN"/>
+        <display value="Identifiant interne"/>
+      </coding>
+    </type>
+    <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/appointment"/>
+    <value value="45789465"/>
+  </identifier>
+  <status value="booked"/>
+  <serviceType>
+    <coding>
+      <system value="https://enovacom.org/ig/fhir/bridge/CodeSystem/enovacom-bridge-appointment-service-type"/>
+      <code value="BO222"/>
+      <display value="FRACTURE DU TIBIA"/>
+    </coding>
+    <text value="FRACTURE DU TIBIA"/>
+  </serviceType>
+  <description value="FRACTURE DU TIBIA"/>
+  <start value="2025-07-24T23:15:00.000Z"/>
+  <end value="2025-07-25T02:15:00.000Z"/>
+  <minutesDuration value="180"/>
+  <participant>
+    <actor>
+      <identifier>
+        <use value="usual"/>
+        <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/location"/>
+        <value value="UNKNOWN"/>
+      </identifier>
+      <display value="Salle"/>
+    </actor>
+    <status value="accepted"/>
+  </participant>
+  <participant>
+    <actor>
+      <reference value="Patient/99a25f60-d947-4b83-ac27-518f1766b96f"/>
+      <identifier>
+        <use value="usual"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+            <code value="PI"/>
+            <display value="Patient internal identifier"/>
+          </coding>
+        </type>
+        <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/patient"/>
+        <value value="004211313"/>
+      </identifier>
+    </actor>
+    <status value="accepted"/>
+  </participant>
+  <participant>
+    <actor>
+      <reference value="Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3"/>
+      <identifier>
+        <use value="usual"/>
+        <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/practitioner"/>
+        <value value="CHIRAB"/>
+      </identifier>
+    </actor>
+    <status value="accepted"/>
+  </participant>
+</Appointment>

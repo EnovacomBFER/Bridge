@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EpisodeOfCare xmlns="http://hl7.org/fhir">
+  <id value="EpisodeOfCareExample"/>
+  <meta>
+    <profile value="https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-episodeofcare"/>
+  </meta>
+  <language value="fr-FR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-FR" lang="fr-FR"><p class="res-header-id"><b>Narratif généré : EpisodeOfCare EpisodeOfCareExample</b></p><a name="EpisodeOfCareExample"> </a><a name="hcEpisodeOfCareExample"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Langue : fr-FR</p><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-episodeOfCare-enovacom-bridge.html">Enovacom Bridge EpisodeOfCare Profile</a></p></div><p><b>identifier</b>: Account number/018714588 (utilisation : usual, )</p><p><b>status</b>: Active</p><p><b>patient</b>: <code>Patient/$id_Patient</code></p><p><b>managingOrganization</b>: <code>Organization/$id_OrganizationEtab</code></p></div>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="AN"/>
+        <display value="Account number"/>
+      </coding>
+    </type>
+    <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/episodeofcare"/>
+    <value value="018714588"/>
+  </identifier>
+  <status value="active"/>
+  <patient>
+    <reference value="Patient/$id_Patient"/>
+    <type value="Patient"/>
+    <identifier>
+      <use value="usual"/>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+          <code value="PI"/>
+          <display value="Patient internal identifier"/>
+        </coding>
+      </type>
+      <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/patient"/>
+      <value value="010208662441"/>
+    </identifier>
+  </patient>
+  <managingOrganization>
+    <reference value="Organization/$id_OrganizationEtab"/>
+    <type value="Organization"/>
+    <identifier>
+      <use value="official"/>
+      <type>
+        <coding>
+          <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+          <code value="FINEG"/>
+          <display value="FINESS d'entité géographique"/>
+        </coding>
+      </type>
+      <system value="https://finess.esante.gouv.fr"/>
+    </identifier>
+  </managingOrganization>
+</EpisodeOfCare>

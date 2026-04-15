@@ -1,0 +1,621 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "systems" : ["http://hl7.org/fhir/administrative-gender"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1"],
+    "uses" : {
+    },
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/appointment-cancellation-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AppointmentCancellationReason",
+    "title" : "Appointment cancellation reason",
+    "description" : "This example value set defines a set of reasons for the cancellation of an appointment.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1381"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1381"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/appointmentstatus",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AppointmentStatus",
+    "title" : "AppointmentStatus",
+    "description" : "The free/busy status of an appointment.",
+    "systems" : ["http://hl7.org/fhir/appointmentstatus"],
+    "oids" : ["2.16.840.1.113883.4.642.3.484"],
+    "sources" : ["2.16.840.1.113883.4.642.3.484"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/common-tags",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CommonTags",
+    "title" : "Common Tags",
+    "description" : "Common Tag Codes defined by FHIR project",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/common-tags"],
+    "oids" : ["2.16.840.1.113883.4.642.3.79"],
+    "sources" : ["2.16.840.1.113883.4.642.3.79"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile",
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile",
+    "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/diagnosis-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DiagnosisRole",
+    "title" : "DiagnosisRole",
+    "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/diagnosis-role"],
+    "oids" : ["2.16.840.1.113883.4.642.3.49"],
+    "sources" : ["2.16.840.1.113883.4.642.3.49"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile",
+    "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-admit-source",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AdmitSource",
+    "title" : "Admit source",
+    "description" : "This value set defines a set of codes that can be used to indicate from where the patient came in.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/admit-source"],
+    "oids" : ["2.16.840.1.113883.4.642.3.257"],
+    "sources" : ["2.16.840.1.113883.4.642.3.257"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-diet",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Diet",
+    "title" : "Diet",
+    "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/diet"],
+    "oids" : ["2.16.840.1.113883.4.642.3.255"],
+    "sources" : ["2.16.840.1.113883.4.642.3.255"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-location-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterLocationStatus",
+    "title" : "EncounterLocationStatus",
+    "description" : "The status of the location.",
+    "systems" : ["http://hl7.org/fhir/encounter-location-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.262"],
+    "sources" : ["2.16.840.1.113883.4.642.3.262"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipantType",
+    "title" : "Participant type",
+    "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/participant-type",
+    "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+    "oids" : ["2.16.840.1.113883.4.642.3.250"],
+    "sources" : ["2.16.840.1.113883.4.642.3.250"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterReasonCodes",
+    "title" : "Encounter Reason Codes",
+    "description" : "This examples value set defines the set of codes that can be used to indicate reasons for an encounter.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.261"],
+    "sources" : ["2.16.840.1.113883.4.642.3.261"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SpecialArrangements",
+    "title" : "Special arrangements",
+    "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/encounter-special-arrangements"],
+    "oids" : ["2.16.840.1.113883.4.642.3.253"],
+    "sources" : ["2.16.840.1.113883.4.642.3.253"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-special-courtesy",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SpecialCourtesy",
+    "title" : "Special courtesy",
+    "description" : "This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.252"],
+    "sources" : ["2.16.840.1.113883.4.642.3.252"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterStatus",
+    "title" : "EncounterStatus",
+    "description" : "Current state of the encounter.",
+    "systems" : ["http://hl7.org/fhir/encounter-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.246"],
+    "sources" : ["2.16.840.1.113883.4.642.3.246"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/episode-of-care-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EpisodeOfCareStatus",
+    "title" : "EpisodeOfCareStatus",
+    "description" : "The status of the episode of care.",
+    "systems" : ["http://hl7.org/fhir/episode-of-care-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.664"],
+    "sources" : ["2.16.840.1.113883.4.642.3.664"],
+    "uses" : {
+    },
+    "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/episodeofcare-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EpisodeOfCareType",
+    "title" : "Episode of care type",
+    "description" : "This example value set defines a set of codes that can be used to express the usage type of an EpisodeOfCare record.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/episodeofcare-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.666"],
+    "sources" : ["2.16.840.1.113883.4.642.3.666"],
+    "uses" : {
+    },
+    "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Identifier Type Codes",
+    "title" : "IdentifierType",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+    "oids" : ["2.16.840.1.113883.4.642.3.45"],
+    "sources" : ["2.16.840.1.113883.4.642.3.45"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "IdentifierUse",
+    "title" : "IdentifierUse",
+    "description" : "Identifies the purpose for this identifier, if known .",
+    "systems" : ["http://hl7.org/fhir/identifier-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.57"],
+    "sources" : ["2.16.840.1.113883.4.642.3.57"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile",
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile",
+    "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/languages",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CommonLanguages",
+    "title" : "Common Languages",
+    "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["2.16.840.1.113883.4.642.3.20"],
+    "sources" : ["2.16.840.1.113883.4.642.3.20"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile",
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile",
+    "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/link-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "LinkType",
+    "title" : "LinkType",
+    "description" : "The type of link between this patient resource and another patient resource.",
+    "systems" : ["http://hl7.org/fhir/link-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.423"],
+    "sources" : ["2.16.840.1.113883.4.642.3.423"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/name-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "NameUse",
+    "title" : "NameUse",
+    "description" : "The use of a human name.",
+    "systems" : ["http://hl7.org/fhir/name-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.65"],
+    "sources" : ["2.16.840.1.113883.4.642.3.65"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/participantrequired",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipantRequired",
+    "title" : "ParticipantRequired",
+    "description" : "Is the Participant required to attend the appointment.",
+    "systems" : ["http://hl7.org/fhir/participantrequired"],
+    "oids" : ["2.16.840.1.113883.4.642.3.488"],
+    "sources" : ["2.16.840.1.113883.4.642.3.488"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/participationstatus",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipationStatus",
+    "title" : "ParticipationStatus",
+    "description" : "The Participation status of an appointment.",
+    "systems" : ["http://hl7.org/fhir/participationstatus"],
+    "oids" : ["2.16.840.1.113883.4.642.3.486"],
+    "sources" : ["2.16.840.1.113883.4.642.3.486"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "PatientContactRelationship",
+    "title" : "Patient Contact Relationship ",
+    "description" : "The nature of the relationship between the patient and the contact person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1130"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1130"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/resource-types",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ResourceType",
+    "title" : "ResourceType",
+    "description" : "One of the resource types defined as part of this version of FHIR.",
+    "systems" : ["http://hl7.org/fhir/resource-types"],
+    "oids" : ["2.16.840.1.113883.4.642.3.27"],
+    "sources" : ["2.16.840.1.113883.4.642.3.27"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile",
+    "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/security-labels",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "All Security Labels",
+    "title" : "SecurityLabels",
+    "description" : "A single value set for all security labels defined by FHIR.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason",
+    "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw",
+    "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+    "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+    "oids" : ["2.16.840.1.113883.4.642.3.47"],
+    "sources" : ["2.16.840.1.113883.4.642.3.47"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile",
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile",
+    "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/service-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ServiceCategory",
+    "title" : "Service category",
+    "description" : "This value set defines an example set of codes that can be used to classify groupings of service-types/specialties.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/service-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.516"],
+    "sources" : ["2.16.840.1.113883.4.642.3.516"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/service-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ServiceType",
+    "title" : "Service type",
+    "description" : "This value set defines an example set of codes of service-types.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/service-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.518"],
+    "sources" : ["2.16.840.1.113883.4.642.3.518"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0092",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSReAdmissionIndicator",
+    "title" : "hl7VS-re-admissionIndicator",
+    "description" : "Value Set of codes which are used to specify that a patient is being re-admitted to a healthcare facility from which they were discharged, and indicates the circumstances around such re-admission.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0092"],
+    "oids" : ["2.16.840.1.113883.21.40"],
+    "sources" : ["2.16.840.1.113883.21.40"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0276",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSAppointmentReasonCodes",
+    "title" : "hl7VS-appointmentReasonCodes",
+    "description" : "Value Set of codes that describe the kind of appointment or the reason why an appointment has been scheduled.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0276"],
+    "oids" : ["2.16.840.1.113883.21.181"],
+    "sources" : ["2.16.840.1.113883.21.181"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActEncounterCode",
+    "title" : "ActEncounterCode",
+    "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.1.11.13955"],
+    "sources" : ["2.16.840.1.113883.1.11.13955"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActPriority",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActPriority",
+    "title" : "ActPriority",
+    "description" : "A code or set of codes (e.g., for routine, emergency,) specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.\r\n\r\n*Discussion:* This attribute is used in orders to indicate the ordered priority, and in event documentation it indicates the actual priority used to perform the act. In definition mood it indicates the available priorities.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
+    "oids" : ["2.16.840.1.113883.1.11.16866"],
+    "sources" : ["2.16.840.1.113883.1.11.16866"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-discharge-disposition",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetEncounterDischargeDisposition",
+    "title" : "FR Core ValueSet Encounter discharge disposition",
+    "description" : "This value set defines a set of codes that can be used to where the patient left the hospital | Circonstances de sortie de l'hôpital.",
+    "systems" : ["https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-circonstances-sortie",
+    "http://terminology.hl7.org/CodeSystem/discharge-disposition"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetEncounterIdentifierType",
+    "title" : "FR Core ValueSet Encounter identifier type",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose (Encounters).",
+    "systems" : ["https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetEncounterType",
+    "title" : "FR Core ValueSet Encounter type",
+    "description" : "A coded type for an encounter | Jeu de valeurs des types de rencontre.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0007",
+    "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-type-admission"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-location-physical-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetLocationPhysicalType",
+    "title" : "FR Core ValueSet Location physical type",
+    "description" : "French location physical type | Types de lieux physiques pour la France",
+    "systems" : ["https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-physical-type"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-marital-status",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetMaritalStatus",
+    "title" : "FR Core ValueSet Patient gender INS ValueSet",
+    "description" : "Patient Gender for INS : male | female | unknown",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-marital-status"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-patient-contact-role",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetPatientContactRole",
+    "title" : "FR Core ValueSet Patient contact role",
+    "description" : "ValueSet patient contact role",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131",
+    "https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass",
+    "https://mos.esante.gouv.fr/NOS/TRE_R217-ProtectionJuridique/FHIR/TRE-R217-ProtectionJuridique"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-patient-identifier-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetPatientIdentifierType",
+    "title" : "FR Core ValueSet Patient identifier type",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose (identification of a patient).",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203",
+    "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-identifier-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetPractitionerIdentifierType",
+    "title" : "FR Core ValueSet Practitioner identifier type",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose (providers identification)",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_G08-TypeIdentifiantPersonne/FHIR/TRE-G08-TypeIdentifiantPersonne",
+    "http://terminology.hl7.org/CodeSystem/v2-0203",
+    "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"],
+    "uses" : {
+    },
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-specialty",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetPractitionerSpecialty",
+    "title" : "FR Core ValueSet Practitioner specialty",
+    "description" : "The modalities of exercice of the practitioner, registered by an official organization for a period of time.",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-relation-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetPatientRelationType",
+    "title" : "FR Core ValueSet relation type",
+    "description" : "ValueSet relation type",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "JDV_J105-EnsembleDiplome-RASS",
+    "title" : null,
+    "description" : "Ensemble des diplômes et qualifications du RASS",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R48-DiplomeEtatFrancais/FHIR/TRE-R48-DiplomeEtatFrancais",
+    "https://mos.esante.gouv.fr/NOS/TRE_R55-CertificatEtudeSpeciale/FHIR/TRE-R55-CertificatEtudeSpeciale",
+    "https://mos.esante.gouv.fr/NOS/TRE_R54-DiplomeUniversiteInterUniversitaire/FHIR/TRE-R54-DiplomeUniversiteInterUniversitaire",
+    "https://mos.esante.gouv.fr/NOS/TRE_R50-DESCGroupe1Diplome/FHIR/TRE-R50-DESCGroupe1Diplome",
+    "https://mos.esante.gouv.fr/NOS/TRE_R226-Dip2iemeCycleNQ/FHIR/TRE-R226-Dip2iemeCycleNQ",
+    "https://mos.esante.gouv.fr/NOS/TRE_R49-DiplomeEtudeSpecialisee/FHIR/TRE-R49-DiplomeEtudeSpecialisee",
+    "https://mos.esante.gouv.fr/NOS/TRE_R52-CapaciteDiplome/FHIR/TRE-R52-CapaciteDiplome",
+    "https://mos.esante.gouv.fr/NOS/TRE_R51-DESCGroupe2Diplome/FHIR/TRE-R51-DESCGroupe2Diplome",
+    "https://mos.esante.gouv.fr/NOS/TRE_R36-AutreDiplomeObtenu/FHIR/TRE-R36-AutreDiplomeObtenu",
+    "https://mos.esante.gouv.fr/NOS/TRE_R58-AutreTypeDiplome/FHIR/TRE-R58-AutreTypeDiplome",
+    "https://mos.esante.gouv.fr/NOS/TRE_R348-FormationSpecialiseeTransversale/FHIR/TRE-R348-FormationSpecialiseeTransversale",
+    "https://mos.esante.gouv.fr/NOS/TRE_R56-Attestation/FHIR/TRE-R56-Attestation",
+    "https://mos.esante.gouv.fr/NOS/TRE_R53-DiplomePaysEEE/FHIR/TRE-R53-DiplomePaysEEE",
+    "https://mos.esante.gouv.fr/NOS/TRE_R57-DiplomeEuropeenEtudeSpecialisee/FHIR/TRE-R57-DiplomeEuropeenEtudeSpecialisee"],
+    "oids" : ["1.2.250.1.213.1.6.1.173"],
+    "sources" : ["1.2.250.1.213.1.6.1.173"],
+    "uses" : {
+    },
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile"
+  }]
+}

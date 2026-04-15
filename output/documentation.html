@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Documentation - Guide D&#39;implementation Bridge v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+     <link href="assets/css/myTemplate.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+     <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.enovacom.com">
+               <img height="50" alt="Visit MyProject" src="assets/images/Enovacom_logo_horizontal_baseline_color@3x.jpg" />
+          </a>
+     </div>
+     <div id="family-nav">
+          <a id="family-logo" no-external="true" href="https://hl7.org/fhir/R4/index.html">
+               <img height="50" alt="Visit MyProject" src="assets/images/fhir-logo-www.png" />
+          </a>
+     </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide D&#39;implementation Bridge</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - trial-use
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li>
+    <a href="documentation.html">Documentation générale</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentation des services API Editeurs
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authentification.html">Authentification</a>
+      </li>
+      <li>
+        <a href="modeleEditeurGet.html">Requête FHIR</a>
+      </li>
+      <li>
+        <a href="modeleEditeurAbo.html">Abonnement</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentation des services API Etablissement
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="modeleEtab.html">Envoi</a>
+      </li>
+      <li>
+        Reception
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="other.html">Téléchargement</a>
+      </li>
+      <li>
+        <a href="https://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a href="https://hl7.fr/ig/fhir/core/">FR Core</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Documentation</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guide D'implementation Bridge - version de développement local (intégration continue v1.1.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://enovacom.org/fhir/bridge/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
+  <h2>Documentation</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#détail-des-ressources" id="markdown-toc-détail-des-ressources">Détail des ressources</a></li>
+  <li><a href="#modélisation-fhir-venuemouvements-générale" id="markdown-toc-modélisation-fhir-venuemouvements-générale">Modélisation FHIR venue/mouvements générale</a></li>
+</ul>
+
+</div>
+<p>Lers informations d'identité et de séjours transites en milieu hospitalié via des messages de type HL7v2.</p>
+
+<p>Nous proposons dans ce guide des profils, basés sur Fr Core v2.1.0, permettant de modéliser la partie Identité, Mouvement, Séjour et Rendez-vous et de se rapprocher des éléments transportés en HL7v2 (profil PAM) dans les messages de type ADT.</p>
+
+<p>Le mapping HL7v2 vers FHIR a été entièrement revu pour s'adapter au plus proche des messages tels qu'ils sont définis dans les extensions française du profil IHE PAM v2.11.1.</p>
+
+<h3 id="détail-des-ressources">Détail des ressources</h3>
+
+<p>Voici la liste des ressources utilisées :</p>
+
+<ul>
+  <li>
+    <p>📄 <strong>Encounter</strong> : ressource modélisant la venue/visite.</p>
+  </li>
+  <li>
+    <p>📁 <strong>EpisodeOfCare</strong> : ressource utilisée pour relier les venues du patient. Il arrive souvent que l'identifiant du dossier administratif soit le même que l'identifiant de la venue. Ces 2 élements sont parfois même confondus. Mais il peut arriver que ces notions soient différentes. L'identifiant métier du dossier administratif est typé NDA alors que l'identifiant métier de la venue est typé IEP.</p>
+  </li>
+  <li>
+    <p>🧑‍⚕️ <strong>Practitioner</strong> : ressource utilisée pour représenter le médecin responsable de la venue du patient (médecin identifié comme <em>Attending Doctor</em> <strong>AT</strong> dans le messages ADT HL7v2). Cette ressource est également utilisée pour représenter le médecin en charge de la réalisation d'un acte associé à un rendez-vous.</p>
+  </li>
+  <li>
+    <p>🙍‍♀️ <strong>Patient</strong> : ressource utilisée pour représenter le patient lié à la venue.</p>
+  </li>
+  <li>
+    <p>📆 <strong>Appointment</strong> : ressource utilisée pour représenter le rendez-vous du patient.</p>
+  </li>
+  <li>
+    <p>🛌 <strong>Location</strong> : les ressources de types Location permettent de modéliser les entités suivantes : Unité de responsabilité médicale, unité d'hébergement, chambre et lit. Ces informations sont transportées en HL7v2 aux positions suivantes (voir profil IHE PAM). Ce type de ressource ne sera cependant pas implémenté. Des <a href="https://www.hl7.org/fhir/R4/references.html#Reference"><strong>références logiques</strong></a> sont utilisées et un paramètre de recherche spécifique permettra de retrouver les séjours en lien avec ces éléments.</p>
+  </li>
+</ul>
+
+<table class="my-ig-table">
+  <thead>
+    <tr>
+      <th style="text-align: left">Position message</th>
+      <th style="text-align: left">Information</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">ZBE-7</td>
+      <td style="text-align: left">Unité de responsabilité médicale</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PV1-3.1</td>
+      <td style="text-align: left">Unité d'hébergement</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PV1-3.2</td>
+      <td style="text-align: left">Chambre</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PV1-3.3</td>
+      <td style="text-align: left">Lit</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>🏥 <strong>Organization</strong> : ressource utilisée pour représenter l'établissement. On y retrouve les information des FINESS, type d'établissement etc… 
+Les ressources de type Patient, Encounter, EpisodeOfCare possèdent un lien de type référence vers la ressource de type Organization.</li>
+</ul>
+
+<h3 id="modélisation-fhir-venuemouvements-générale">Modélisation FHIR venue/mouvements générale</h3>
+
+<p>Cette modélisation globale indique  liens réalisés entre les différentes ressources retenues (référence).</p>
+
+<div style="text-align: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="DESCRIPTION" height="493px" preserveAspectRatio="none" style="width:653px;height:493px;background:#FFFFFF;" version="1.1" viewBox="0 0 653 493" width="653px" zoomAndPan="magnify"><defs /><g><!--cluster Dossier--><g class="cluster" data-entity="Dossier" data-source-line="2" data-uid="ent0002" id="cluster_Dossier"><rect fill="none" height="363" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="497" x="7" y="7" /><path d="M68.3584,7 L68.3584,17.6094 L58.3584,27.6094 L7,27.6094" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="51.3584" x="10" y="22.5332">Dossier</text></g><!--cluster S?jour--><g class="cluster" data-entity="S&#233;jour" data-source-line="4" data-uid="ent0004" id="cluster_S&#233;jour"><rect fill="none" height="194" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="146" x="31" y="51" /><path d="M84.5654,51 L84.5654,61.6094 L74.5654,71.6094 L31,71.6094" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.5654" x="34" y="66.5332">S&#233;jour</text></g><!--cluster RDV--><g class="cluster" data-entity="RDV" data-source-line="8" data-uid="ent0007" id="cluster_RDV"><rect fill="none" height="194" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="142" x="201" y="152" /><path d="M240.5586,152 L240.5586,162.6094 L230.5586,172.6094 L201,172.6094" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="29.5586" x="204" y="167.5332">RDV</text></g><!--cluster Structure--><g class="cluster" data-entity="Structure" data-source-line="13" data-uid="ent0010" id="cluster_Structure"><rect fill="none" height="93" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="170" x="472" y="394" /><path d="M544.2344,394 L544.2344,404.6094 L534.2344,414.6094 L472,414.6094" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="62.2344" x="475" y="409.5332">Structure</text></g><!--entity dossier--><g class="entity" data-entity="dossier" data-source-line="3" data-uid="ent0003" id="entity_dossier"><rect fill="#F1F1F1" height="40.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125.7168" x="362" y="188" /><polygon fill="#F1F1F1" points="470.7168,193,470.7168,207,482.7168,207,482.7168,199,476.7168,193,470.7168,193" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="476.7168" x2="476.7168" y1="193" y2="199" /><line style="stroke:#181818;stroke-width:0.5;" x1="482.7168" x2="476.7168" y1="199" y2="199" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95.7168" x="372" y="215.5332">EpisodeOfCare</text></g><!--entity sej--><g class="entity" data-entity="sej" data-source-line="5" data-uid="ent0005" id="entity_sej"><rect fill="#F1F1F1" height="40.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="113.2686" x="47.5" y="87" /><polygon fill="#F1F1F1" points="143.7686,92,143.7686,106,155.7686,106,155.7686,98,149.7686,92,143.7686,92" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="149.7686" x2="149.7686" y1="92" y2="98" /><line style="stroke:#181818;stroke-width:0.5;" x1="155.7686" x2="149.7686" y1="98" y2="98" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.2686" x="57.5" y="114.5332">EncounterVN</text></g><!--entity medResp--><g class="entity" data-entity="medResp" data-source-line="6" data-uid="ent0006" id="entity_medResp"><rect fill="#F1F1F1" height="40.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="100.8066" x="53.5" y="188" /><polygon fill="#F1F1F1" points="137.3066,193,137.3066,207,149.3066,207,149.3066,199,143.3066,193,137.3066,193" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="143.3066" x2="143.3066" y1="193" y2="199" /><line style="stroke:#181818;stroke-width:0.5;" x1="149.3066" x2="143.3066" y1="199" y2="199" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.8066" x="63.5" y="215.5332">Practitioner</text></g><!--entity rdv--><g class="entity" data-entity="rdv" data-source-line="9" data-uid="ent0008" id="entity_rdv"><rect fill="#F1F1F1" height="40.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108.6064" x="217.5" y="188" /><polygon fill="#F1F1F1" points="309.1064,193,309.1064,207,321.1064,207,321.1064,199,315.1064,193,309.1064,193" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="315.1064" x2="315.1064" y1="193" y2="199" /><line style="stroke:#181818;stroke-width:0.5;" x1="321.1064" x2="315.1064" y1="199" y2="199" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.6064" x="227.5" y="215.5332">Appointment</text></g><!--entity medRdv--><g class="entity" data-entity="medRdv" data-source-line="10" data-uid="ent0009" id="entity_medRdv"><rect fill="#F1F1F1" height="40.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="100.8066" x="221.5" y="289" /><polygon fill="#F1F1F1" points="305.3066,294,305.3066,308,317.3066,308,317.3066,300,311.3066,294,305.3066,294" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="311.3066" x2="311.3066" y1="294" y2="300" /><line style="stroke:#181818;stroke-width:0.5;" x1="317.3066" x2="311.3066" y1="300" y2="300" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.8066" x="231.5" y="316.5332">Practitioner</text></g><!--entity etab--><g class="entity" data-entity="etab" data-source-line="14" data-uid="ent0011" id="entity_etab"><rect fill="#F1F1F1" height="40.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138.1787" x="488" y="430" /><polygon fill="#F1F1F1" points="609.1787,435,609.1787,449,621.1787,449,621.1787,441,615.1787,435,609.1787,435" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="615.1787" x2="615.1787" y1="435" y2="441" /><line style="stroke:#181818;stroke-width:0.5;" x1="621.1787" x2="615.1787" y1="441" y2="441" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108.1787" x="498" y="457.5332">OrganizationEtab</text></g><!--entity pati--><g class="entity" data-entity="pati" data-source-line="16" data-uid="ent0012" id="entity_pati"><rect fill="#F1F1F1" height="40.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73.5859" x="520" y="289" /><polygon fill="#F1F1F1" points="576.5859,294,576.5859,308,588.5859,308,588.5859,300,582.5859,294,576.5859,294" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="582.5859" x2="582.5859" y1="294" y2="300" /><line style="stroke:#181818;stroke-width:0.5;" x1="588.5859" x2="582.5859" y1="300" y2="300" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43.5859" x="530" y="316.5332">Patient</text></g><!--link sej to etab--><g class="link" data-entity-1="sej" data-entity-2="etab" data-source-line="22" data-uid="lnk13" id="link_sej_etab"><path d="M160.74,109.64 C274.87,112.41 523.99,121.04 555,144 C641.02,207.7 646.47,276.66 612,378 C605.24,397.87 594.6093,412.1675 582.0793,425.4375" fill="none" id="sej-to-etab" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="577.96,429.8,587.0472,426.0024,581.3927,426.1646,581.2305,420.51,577.96,429.8" style="stroke:#181818;stroke-width:1;" /></g><!--link sej to medResp--><g class="link" data-entity-1="sej" data-entity-2="medResp" data-source-line="23" data-uid="lnk14" id="link_sej_medResp"><path d="M104,128.06 C104,145.42 104,164.64 104,181.98" fill="none" id="sej-to-medResp" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="104,187.98,108,178.98,104,182.98,100,178.98,104,187.98" style="stroke:#181818;stroke-width:1;" /></g><!--link sej to pati--><g class="link" data-entity-1="sej" data-entity-2="pati" data-source-line="24" data-uid="lnk15" id="link_sej_pati"><path d="M160.78,110.1 C264.82,113.54 477.78,123.06 504,144 C548.78,179.76 556.0852,247.732 556.9952,282.992" fill="none" id="sej-to-pati" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="557.15,288.99,560.9165,279.8898,557.021,283.9917,552.9191,280.0962,557.15,288.99" style="stroke:#181818;stroke-width:1;" /></g><!--link sej to dossier--><g class="link" data-entity-1="sej" data-entity-2="dossier" data-source-line="25" data-uid="lnk16" id="link_sej_dossier"><path d="M160.76,108.91 C210.61,111.11 284.16,118.9 343,144 C367.01,154.24 385.7529,169.1563 401.2829,183.7163" fill="none" id="sej-to-dossier" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="405.66,187.82,401.8301,178.7463,402.0124,184.4002,396.3585,184.5825,405.66,187.82" style="stroke:#181818;stroke-width:1;" /></g><!--link sej to rdv--><g class="link" data-entity-1="sej" data-entity-2="rdv" data-source-line="26" data-uid="lnk17" id="link_sej_rdv"><path d="M146.97,128.19 C156.96,133.1 167.47,138.53 177,144 C200.57,157.53 221.2093,171.3125 239.8693,184.4125" fill="none" id="sej-to-rdv" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="244.78,187.86,239.7123,179.415,240.6878,184.9871,235.1156,185.9626,244.78,187.86" style="stroke:#181818;stroke-width:1;" /></g><!--link rdv to pati--><g class="link" data-entity-1="rdv" data-entity-2="pati" data-source-line="31" data-uid="lnk18" id="link_rdv_pati"><path d="M294.19,229.12 C304.73,237.55 317.86,246.85 331,253 C393.75,282.39 467.9116,296.4523 513.9516,303.1023" fill="none" id="rdv-to-pati" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="519.89,303.96,511.5543,298.7145,514.9414,303.2452,510.4106,306.6323,519.89,303.96" style="stroke:#181818;stroke-width:1;" /></g><!--link rdv to medRdv--><g class="link" data-entity-1="rdv" data-entity-2="medRdv" data-source-line="32" data-uid="lnk19" id="link_rdv_medRdv"><path d="M272,229.06 C272,246.42 272,265.64 272,282.98" fill="none" id="rdv-to-medRdv" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="272,288.98,276,279.98,272,283.98,268,279.98,272,288.98" style="stroke:#181818;stroke-width:1;" /></g><!--link pati to etab--><g class="link" data-entity-1="pati" data-entity-2="etab" data-source-line="38" data-uid="lnk20" id="link_pati_etab"><path d="M557,330.12 C557,356.61 557,397.54 557,423.98" fill="none" id="pati-to-etab" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="557,429.98,561,420.98,557,424.98,553,420.98,557,429.98" style="stroke:#181818;stroke-width:1;" /></g><!--link dossier to pati--><g class="link" data-entity-1="dossier" data-entity-2="pati" data-source-line="39" data-uid="lnk21" id="link_dossier_pati"><path d="M451.08,229.06 C474.22,246.42 503.0493,268.041 526.1793,285.381" fill="none" id="dossier-to-pati" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="530.98,288.98,526.1782,280.381,526.9794,285.9808,521.3795,286.782,530.98,288.98" style="stroke:#181818;stroke-width:1;" /></g><!--link dossier to etab--><g class="link" data-entity-1="dossier" data-entity-2="etab" data-source-line="40" data-uid="lnk22" id="link_dossier_etab"><path d="M432.49,229.13 C445.11,261.28 472.25,326.72 503,378 C514.12,396.54 525.2897,411.3788 536.6497,425.3188" fill="none" id="dossier-to-etab" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="540.44,429.97,537.8553,420.4664,537.2814,426.094,531.6537,425.5201,540.44,429.97" style="stroke:#181818;stroke-width:1;" /></g></g></svg>
+    <br clear="all" />
+</div>
+
+<p>La correspondance est la suivante :</p>
+
+<table class="my-ig-table">
+  <thead>
+    <tr>
+      <th style="text-align: left">Entité</th>
+      <th style="text-align: left">Profil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Visite/venue</td>
+      <td style="text-align: left"><a href="../output/StructureDefinition-encounter-visit-enovacom-bridge.html">Enovacom Bridge Encounter Profile</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Dossier administratif</td>
+      <td style="text-align: left"><a href="../output/StructureDefinition-episodeOfCare-enovacom-bridge.html">Enovacom Bridge EpisodeOfCare Profile</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Patient</td>
+      <td style="text-align: left"><a href="../output/StructureDefinition-patient-enovacom-bridge.html">Enovacom Bridge Patient Profile</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Médecin</td>
+      <td style="text-align: left"><a href="../output/StructureDefinition-practitioner-enovacom-bridge.html">Enovacom Bridge Practitioner Profile</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Rendez-vous</td>
+      <td style="text-align: left"><a href="../output/StructureDefinition-appointment-enovacom-bridge.html">Enovacom Bridge Appointment Profile</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://enovacom.com">Enovacom</a>.  Package EnovacomBridge#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 15, 2026 14:29+0200">2026-04-15</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

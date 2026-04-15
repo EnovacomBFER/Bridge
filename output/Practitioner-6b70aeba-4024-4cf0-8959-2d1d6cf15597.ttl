@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://enovacom.org/fhir/bridge/Practitioner/6b70aeba-4024-4cf0-8959-2d1d6cf15597> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "6b70aeba-4024-4cf0-8959-2d1d6cf15597"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"^^xsd:anyURI ;
+       fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner>
+     ] [
+       fhir:v "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-practitioner"^^xsd:anyURI ;
+       fhir:l <https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-practitioner>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "fr-FR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr-FR\" lang=\"fr-FR\"><p class=\"res-header-id\"><b>Narratif généré : Practitioner 6b70aeba-4024-4cf0-8959-2d1d6cf15597</b></p><a name=\"6b70aeba-4024-4cf0-8959-2d1d6cf15597\"> </a><a name=\"hc6b70aeba-4024-4cf0-8959-2d1d6cf15597\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Langue : fr-FR</p><p style=\"margin-bottom: 0px\">Profils: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html\">FR Core Practitioner Profile</a>, <a href=\"StructureDefinition-practitioner-enovacom-bridge.html\">Enovacom Bridge Practitioner Profile</a></p></div><p><b>identifier</b>: N° ADELI/000000000 (utilisation : official, ), Identifiant interne/XXXXXX (utilisation : usual, ), N° RPPS/10100000000 (utilisation : official, )</p><p><b>active</b>: true</p><p><b>name</b>: Practitioner UNKNOWN </p><p><b>address</b>: [2 rue des tests  MARSEILLE 13008 100](work)</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
+           fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
+         ] ;
+         fhir:code [ fhir:v "ADELI" ] ;
+         fhir:display [ fhir:v "N° ADELI" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "https://adeli.esante.gouv.fr"^^xsd:anyURI ;
+       fhir:l <https://adeli.esante.gouv.fr>
+     ] ;
+     fhir:value [ fhir:v "000000000" ]
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
+           fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
+         ] ;
+         fhir:code [ fhir:v "INTRN" ] ;
+         fhir:display [ fhir:v "Identifiant interne" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://EnovacomBridge.com/130000000/identifiers/practitioner"^^xsd:anyURI ;
+       fhir:l <http://EnovacomBridge.com/130000000/identifiers/practitioner>
+     ] ;
+     fhir:value [ fhir:v "XXXXXX" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
+           fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
+         ] ;
+         fhir:code [ fhir:v "RPPS" ] ;
+         fhir:display [ fhir:v "N° RPPS" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "https://rpps.esante.gouv.fr"^^xsd:anyURI ;
+       fhir:l <https://rpps.esante.gouv.fr>
+     ] ;
+     fhir:value [ fhir:v "10100000000" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "UNKNOWN" ] ;
+     fhir:given ( [ fhir:v "Practitioner" ] )
+  ] ) ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "work" ] ;
+     fhir:text [ fhir:v "[2 rue des tests  MARSEILLE 13008 100]" ] ;
+     fhir:line ( [ fhir:v "2 rue des tests" ] ) ;
+     fhir:city [ fhir:v "MARSEILLE" ] ;
+     fhir:postalCode [ fhir:v "13008" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

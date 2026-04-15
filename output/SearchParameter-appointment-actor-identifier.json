@@ -1,0 +1,27 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "appointment-actor-identifier",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : SearchParameter appointment-actor-identifier</b></p><a name=\"appointment-actor-identifier\"> </a><a name=\"hcappointment-actor-identifier\"> </a><h2>actor-identifier</h2><p>Paramètre <code>actor-identifier</code>:<code>token</code></p><div><p>Paramètre de recherche pour récupérer une ressource Appointment par la salle de réalisation de l'acte du rendez-vous.</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/appointment.html\">Appointment</a></td></tr><tr><td>Expression</td><td><code>Appointment.participant.actor.identifier</code></td></tr><tr><td>Mode de traitement</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://enovacom.org/fhir/SearchParameter/appointment-actor-identifier",
+  "version" : "1.1.0",
+  "name" : "actor-identifier",
+  "status" : "active",
+  "date" : "2026-04-15T14:29:25+02:00",
+  "publisher" : "Enovacom",
+  "contact" : [{
+    "name" : "Enovacom",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://enovacom.com"
+    }]
+  }],
+  "description" : "Paramètre de recherche pour récupérer une ressource Appointment par la salle de réalisation de l'acte du rendez-vous.",
+  "code" : "actor-identifier",
+  "base" : ["Appointment"],
+  "type" : "token",
+  "expression" : "Appointment.participant.actor.identifier",
+  "xpathUsage" : "normal"
+}

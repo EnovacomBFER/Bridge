@@ -1,0 +1,259 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://enovacom.org/fhir/bridge/Encounter/EncounterVisitExample> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EncounterVisitExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-encounter-visit"^^xsd:anyURI ;
+       fhir:l <https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-encounter-visit>
+     ] [
+       fhir:v "https://enovacom.com/ig/fhir/StructureDefinition/fr-core-encounter-visit"^^xsd:anyURI ;
+       fhir:l <https://enovacom.com/ig/fhir/StructureDefinition/fr-core-encounter-visit>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "fr-FR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr-FR\" lang=\"fr-FR\"><p class=\"res-header-id\"><b>Narratif généré : Encounter EncounterVisitExample</b></p><a name=\"EncounterVisitExample\"> </a><a name=\"hcEncounterVisitExample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Langue : fr-FR</p><p style=\"margin-bottom: 0px\">Profils: <a href=\"StructureDefinition-encounter-visit-enovacom-bridge.html\">Enovacom Bridge Encounter Visit Profile</a>, <code>https://enovacom.com/ig/fhir/StructureDefinition/fr-core-encounter-visit</code></p></div><p><b>identifier</b>: Visit Number/3091281 (utilisation : usual, )</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0007 R}\">Routine</span></p><p><b>subject</b>: <a href=\"Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7\">Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7</a></p><p><b>episodeOfCare</b>: <a href=\"EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7\">EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}\">Médecin assumant la responsabilité médicale</span></td><td><a href=\"Practitioner/3ba92191-b334-4749-9bd8-1a85d3556ca6\">IVANESCU CHASTANG</a></td></tr></table><p><b>period</b>: 2024-10-03 08:00:00+0000 --&gt; 2024-10-04 00:00:00+0000</p><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Origin</b></td><td><b>AdmitSource</b></td><td><b>Destination</b></td></tr><tr><td style=\"display: none\">*</td><td>Etablissement de provenance (Identifier: <code>https://finess.esante.gouv.fr</code>/770000446)</td><td><span title=\"Codes :{http://terminology.hl7.org/CodeSystem/admit-source gp}\">General Practitioner referral</span></td><td>Identifier: FINESS d'entité géographique/123456</td></tr></table><blockquote><p><b>location</b></p><p><b>location</b>: <a href=\"Location/2ea92154-b334-4812-9ae7-1a85d3456er4\">Unité d'hébergement</a></p></blockquote><blockquote><p><b>location</b></p><p><b>location</b>: <a href=\"Location/i5a89154-p264-4812-1ak7-1a85d344785p\">Unité de responsabilité médicale</a></p></blockquote><p><b>serviceProvider</b>: <a href=\"Organization/2jg92146-b642-4ae2-71m7-4l8m2345ed4j\">Etablissement de rattachement</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type"^^xsd:anyURI ;
+           fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type>
+         ] ;
+         fhir:code [ fhir:v "VN" ] ;
+         fhir:display [ fhir:v "Visit Number" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/encounter"^^xsd:anyURI ;
+       fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/encounter>
+     ] ;
+     fhir:value [ fhir:v "3091281" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0007"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0007>
+       ] ;
+       fhir:code [ fhir:v "R" ] ;
+       fhir:display [ fhir:v "Routine" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <https://enovacom.org/fhir/bridge/Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7> ;
+     fhir:reference [ fhir:v "Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7" ] ;
+     fhir:identifier [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+             fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+           ] ;
+           fhir:code [ fhir:v "PI" ] ;
+           fhir:display [ fhir:v "Patient internal identifier" ]
+         ] )
+       ] ;
+       fhir:system [
+         fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/patient"^^xsd:anyURI ;
+         fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/patient>
+       ] ;
+       fhir:value [ fhir:v "010208662441" ]
+     ]
+  ] ; # 
+  fhir:episodeOfCare ( [
+     fhir:l <https://enovacom.org/fhir/bridge/EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7> ;
+     fhir:reference [ fhir:v "EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7" ] ;
+     fhir:identifier [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+             fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+           ] ;
+           fhir:code [ fhir:v "AN" ] ;
+           fhir:display [ fhir:v "Account number" ]
+         ] )
+       ] ;
+       fhir:system [
+         fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/episodeofcare"^^xsd:anyURI ;
+         fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/episodeofcare>
+       ] ;
+       fhir:value [ fhir:v "018714588" ]
+     ]
+  ] ) ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ParticipationType>
+         ] ;
+         fhir:code [ fhir:v "ATND" ] ;
+         fhir:display [ fhir:v "attender" ]
+       ] ) ;
+       fhir:text [ fhir:v "Médecin assumant la responsabilité médicale" ]
+     ] ) ;
+     fhir:individual [
+       fhir:l <https://enovacom.org/fhir/bridge/Practitioner/3ba92191-b334-4749-9bd8-1a85d3556ca6> ;
+       fhir:reference [ fhir:v "Practitioner/3ba92191-b334-4749-9bd8-1a85d3556ca6" ] ;
+       fhir:identifier [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
+               fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
+             ] ;
+             fhir:code [ fhir:v "RPPS" ] ;
+             fhir:display [ fhir:v "N° RPPS" ]
+           ] )
+         ] ;
+         fhir:system [
+           fhir:v "https://rpps.esante.gouv.fr"^^xsd:anyURI ;
+           fhir:l <https://rpps.esante.gouv.fr>
+         ] ;
+         fhir:value [ fhir:v "10100473148" ]
+       ] ;
+       fhir:display [ fhir:v "IVANESCU CHASTANG" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2024-10-03T08:00:00Z"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2024-10-04T00:00:00Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:hospitalization [
+     fhir:origin [
+       fhir:identifier [
+         fhir:system [
+           fhir:v "https://finess.esante.gouv.fr"^^xsd:anyURI ;
+           fhir:l <https://finess.esante.gouv.fr>
+         ] ;
+         fhir:value [ fhir:v "770000446" ]
+       ] ;
+       fhir:display [ fhir:v "Etablissement de provenance" ]
+     ] ;
+     fhir:admitSource [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/admit-source"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/admit-source>
+         ] ;
+         fhir:code [ fhir:v "gp" ] ;
+         fhir:display [ fhir:v "General Practitioner referral" ]
+       ] )
+     ] ;
+     fhir:destination [
+       fhir:identifier [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
+               fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
+             ] ;
+             fhir:code [ fhir:v "FINEG" ] ;
+             fhir:display [ fhir:v "FINESS d'entité géographique" ]
+           ] )
+         ] ;
+         fhir:system [
+           fhir:v "https://finess.esante.gouv.fr"^^xsd:anyURI ;
+           fhir:l <https://finess.esante.gouv.fr>
+         ] ;
+         fhir:value [ fhir:v "123456" ]
+       ]
+     ]
+  ] ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:l <https://enovacom.org/fhir/bridge/Location/2ea92154-b334-4812-9ae7-1a85d3456er4> ;
+       fhir:reference [ fhir:v "Location/2ea92154-b334-4812-9ae7-1a85d3456er4" ] ;
+       fhir:identifier [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type"^^xsd:anyURI ;
+               fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type>
+             ] ;
+             fhir:code [ fhir:v "INTRN" ] ;
+             fhir:display [ fhir:v "Identifiant interne" ]
+           ] )
+         ] ;
+         fhir:system [
+           fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/locationUFH"^^xsd:anyURI ;
+           fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/locationUFH>
+         ] ;
+         fhir:value [ fhir:v "1412" ]
+       ] ;
+       fhir:display [ fhir:v "Unité d'hébergement" ]
+     ]
+  ] [
+     fhir:location [
+       fhir:l <https://enovacom.org/fhir/bridge/Location/i5a89154-p264-4812-1ak7-1a85d344785p> ;
+       fhir:reference [ fhir:v "Location/i5a89154-p264-4812-1ak7-1a85d344785p" ] ;
+       fhir:identifier [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type"^^xsd:anyURI ;
+               fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type>
+             ] ;
+             fhir:code [ fhir:v "INTRN" ] ;
+             fhir:display [ fhir:v "Identifiant interne" ]
+           ] )
+         ] ;
+         fhir:system [
+           fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/locationUM"^^xsd:anyURI ;
+           fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/locationUM>
+         ] ;
+         fhir:value [ fhir:v "1412" ]
+       ] ;
+       fhir:display [ fhir:v "Unité de responsabilité médicale" ]
+     ]
+  ] ) ; # 
+  fhir:serviceProvider [
+     fhir:l <https://enovacom.org/fhir/bridge/Organization/2jg92146-b642-4ae2-71m7-4l8m2345ed4j> ;
+     fhir:reference [ fhir:v "Organization/2jg92146-b642-4ae2-71m7-4l8m2345ed4j" ] ;
+     fhir:identifier [
+       fhir:use [ fhir:v "official" ] ;
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
+             fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
+           ] ;
+           fhir:code [ fhir:v "FINEG" ] ;
+           fhir:display [ fhir:v "FINESS d'entité géographique" ]
+         ] )
+       ] ;
+       fhir:system [
+         fhir:v "https://finess.esante.gouv.fr"^^xsd:anyURI ;
+         fhir:l <https://finess.esante.gouv.fr>
+       ] ;
+       fhir:value [ fhir:v "750700015" ]
+     ] ;
+     fhir:display [ fhir:v "Etablissement de rattachement" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

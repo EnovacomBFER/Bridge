@@ -1,0 +1,720 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/administrative-gender",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "oids" : ["2.16.840.1.113883.4.642.4.2"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-administrative-gender.html" : "AdministrativeGender"
+  },
+  {
+    "url" : "http://hl7.org/fhir/appointmentstatus",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AppointmentStatus",
+    "title" : "AppointmentStatus",
+    "description" : "The free/busy status of an appointment.",
+    "oids" : ["2.16.840.1.113883.4.642.4.485"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-appointmentstatus.html" : "AppointmentStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/encounter-location-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterLocationStatus",
+    "title" : "EncounterLocationStatus",
+    "description" : "The status of the location.",
+    "oids" : ["2.16.840.1.113883.4.642.4.263"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-location-status.html" : "EncounterLocationStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/encounter-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterStatus",
+    "title" : "EncounterStatus",
+    "description" : "Current state of the encounter.",
+    "oids" : ["2.16.840.1.113883.4.642.4.247"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-status.html" : "EncounterStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/episode-of-care-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EpisodeOfCareStatus",
+    "title" : "EpisodeOfCareStatus",
+    "description" : "The status of the episode of care.",
+    "oids" : ["2.16.840.1.113883.4.642.4.665"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-episode-of-care-status.html" : "EpisodeOfCareStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/identifier-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "IdentifierUse",
+    "title" : "IdentifierUse",
+    "description" : "Identifies the purpose for this identifier, if known .",
+    "oids" : ["2.16.840.1.113883.4.642.4.58"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-identifier-use.html" : "IdentifierUse"
+  },
+  {
+    "url" : "http://hl7.org/fhir/link-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "LinkType",
+    "title" : "LinkType",
+    "description" : "The type of link between this patient resource and another patient resource.",
+    "oids" : ["2.16.840.1.113883.4.642.4.424"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-link-type.html" : "LinkType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/name-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "NameUse",
+    "title" : "NameUse",
+    "description" : "The use of a human name.",
+    "oids" : ["2.16.840.1.113883.4.642.4.66"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-name-use.html" : "NameUse"
+  },
+  {
+    "url" : "http://hl7.org/fhir/participantrequired",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipantRequired",
+    "title" : "ParticipantRequired",
+    "description" : "Is the Participant required to attend the appointment.",
+    "oids" : ["2.16.840.1.113883.4.642.4.489"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-participantrequired.html" : "ParticipantRequired"
+  },
+  {
+    "url" : "http://hl7.org/fhir/participationstatus",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipationStatus",
+    "title" : "ParticipationStatus",
+    "description" : "The Participation status of an appointment.",
+    "oids" : ["2.16.840.1.113883.4.642.4.487"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-participationstatus.html" : "ParticipationStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/resource-types",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ResourceType",
+    "title" : "ResourceType",
+    "description" : "One of the resource types defined as part of this version of FHIR.",
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType"
+  },
+  {
+    "url" : "http://snomed.info/sct",
+    "version" : null,
+    "status" : "active",
+    "name" : "SNOMED_CT",
+    "title" : "SNOMED CT (all versions)",
+    "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+    "oids" : ["2.16.840.1.113883.6.96"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/admit-source",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "AdmitSource",
+    "title" : "Admit source",
+    "description" : "This value set defines a set of codes that can be used to indicate from where the patient came in.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1092"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-admit-source.html" : "Admit source"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason",
+    "version" : "2.1.1",
+    "status" : "active",
+    "name" : "AppointmentCancellationReason",
+    "title" : "Appointment cancellation reason",
+    "description" : "This example value set defines a set of reasons for the cancellation of an appointment.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1382"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html" : "Appointment cancellation reason"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "CommonTags",
+    "title" : "Common Tags",
+    "description" : "Common Tag Codes defined by FHIR project",
+    "oids" : ["2.16.840.1.113883.4.642.1.1067"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-common-tags.html" : "Common Tags"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+    "version" : "1.1.1",
+    "status" : "active",
+    "name" : "DiagnosisRole",
+    "title" : "Diagnosis Role",
+    "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1054"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-diagnosis-role.html" : "DiagnosisRole"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/diet",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "Diet",
+    "title" : "Diet",
+    "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1091"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-diet.html" : "Diet"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "DischargeDisposition",
+    "title" : "Discharge disposition",
+    "description" : "This value set defines a set of codes that can be used to where the patient left the hospital.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1093"],
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-discharge-disposition.html" : "FR Core ValueSet Encounter discharge disposition"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "SpecialArrangements",
+    "title" : "Special arrangements",
+    "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1090"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-special-arrangements.html" : "Special arrangements"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/episodeofcare-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "EpisodeOfCareType",
+    "title" : "Episode of care type",
+    "description" : "This example value set defines a set of codes that can be used to express the usage type of an EpisodeOfCare record.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1189"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-episodeofcare-type.html" : "Episode of care type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/participant-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ParticipantType",
+    "title" : "Participant type",
+    "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1089"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/service-category",
+    "version" : "1.1.1",
+    "status" : "active",
+    "name" : "ServiceCategory",
+    "title" : "Service category",
+    "description" : "This value set defines an example set of codes that can be used to classify groupings of service-types/specialties.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1144"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-service-category.html" : "Service category"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/service-type",
+    "version" : "1.1.1",
+    "status" : "active",
+    "name" : "ServiceType",
+    "title" : "Service type",
+    "description" : "This value set defines an example set of codes of service-types.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1145"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-service-type.html" : "Service type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0007",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "AdmissionType",
+    "title" : "admissionType",
+    "description" : "Code system of concepts specifying the circumstances under which the patient was or will be admitted.  Used in HL7 Version 2.x messaging in the PV1 segment.",
+    "oids" : ["2.16.840.1.113883.18.9"],
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-type.html" : "FR Core ValueSet Encounter type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0092",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ReAdmissionIndicator",
+    "title" : "re-admissionIndicator",
+    "description" : "Code system of concepts which are used to specify that a patient is being re admitted to a healthcare facilityin from which they were discharged, and indicates the circumstances around such re-admission.  Used in HL7 Version 2.x messagine in the PV1 segment.",
+    "oids" : ["2.16.840.1.113883.18.36"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v2-0092.html" : "hl7VS-re-admissionIndicator"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ContactRole2",
+    "title" : "contactRole2",
+    "description" : "Code system of concepts which specify a relationship role that the next of kin/associated parties plays with regard to the patient. Also used in referrals, for example, it may be necessary to identify the contact representative at the clinic that sent a referral. Used in HL7 Version 2 messaging in the NK1 and CTD segments after 2.5, when it replace 2.16.840.1.113883.18.57.",
+    "oids" : ["2.16.840.1.113883.18.58"],
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role",
+    "http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html" : "Patient Contact Relationship "
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "IdentifierType",
+    "title" : "identifierType",
+    "description" : "HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON.",
+    "oids" : ["2.16.840.1.113883.18.108"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType",
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-identifier-type.html" : "FR Core ValueSet Patient identifier type",
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "AppointmentReason",
+    "title" : "appointmentReason",
+    "description" : "Code system of concepts used to describe the kind of appointment or the reason why an appointment has been scheduled.  Used in HL7 Version 2.x messaging in the ARQ segment.",
+    "oids" : ["2.16.840.1.113883.18.169"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v2-0276.html" : "hl7VS-appointmentReasonCodes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "version" : "10.0.0",
+    "status" : "active",
+    "name" : "ActCode",
+    "title" : "ActCode",
+    "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+    "oids" : ["2.16.840.1.113883.5.4"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "ActPriority",
+    "title" : "ActPriority",
+    "description" : "A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.",
+    "oids" : ["2.16.840.1.113883.5.7"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ActPriority.html" : "ActPriority"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "EncounterSpecialCourtesy",
+    "title" : "EncounterSpecialCourtesy",
+    "description" : "**** MISSING DESCRIPTION ****",
+    "oids" : ["2.16.840.1.113883.5.40"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-special-courtesy.html" : "Special courtesy"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "MaritalStatus",
+    "title" : "MaritalStatus",
+    "description" : "\\* \\* \\* No description supplied \\* \\* \\*\r\n\r\n*Open Issue:* The specific meanings of these codes can vary somewhat by jurisdiction and implementation so caution should be used when determining equivalency.\r\n\r\n*Open Issue:* fixing and completion of the hierarchy and proper good definitions of all the concepts is badly needed.",
+    "oids" : ["2.16.840.1.113883.5.2"],
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-marital-status.html" : "FR Core ValueSet Patient gender INS ValueSet"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "NullFlavor",
+    "title" : "NullFlavor",
+    "description" : "A collection of codes specifying why a valid value is not present.",
+    "oids" : ["2.16.840.1.113883.5.1008"],
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-marital-status.html" : "FR Core ValueSet Patient gender INS ValueSet",
+    "http://hl7.org/fhir/R4/valueset-encounter-special-courtesy.html" : "Special courtesy"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+    "version" : "6.0.0",
+    "status" : "active",
+    "name" : "ParticipationType",
+    "title" : "ParticipationType",
+    "description" : "A code specifying the meaning and purpose of every Participation instance. Each of its values implies specific constraints on the Roles undertaking the participation.",
+    "oids" : ["2.16.840.1.113883.5.90"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-circonstances-sortie",
+    "version" : "2.1.0",
+    "status" : "draft",
+    "name" : "FRCoreCodeSystemCirconstancesSortie",
+    "title" : "FR Core CodeSystem Circonstances Sortie",
+    "description" : "Discharge Disposition",
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-discharge-disposition.html" : "FR Core ValueSet Encounter discharge disposition"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",
+    "version" : "2.1.0",
+    "status" : "draft",
+    "name" : "FRCoreCodeSystemIdentifierType",
+    "title" : "FR Core CodeSystem Identifier Type",
+    "description" : "Identifier type",
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-identifier-type.html" : "FR Core ValueSet Encounter identifier type"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-physical-type",
+    "version" : "2.1.0",
+    "status" : "draft",
+    "name" : "FRCoreCodeSystemLocationPhysicalType",
+    "title" : "FR Core CodeSystem Location Physical Type",
+    "description" : "Location physical type",
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-location-physical-type.html" : "FR Core ValueSet Location physical type"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-marital-status",
+    "version" : "2.1.0",
+    "status" : "draft",
+    "name" : "FRCoreCodeSystemMaritalStatus",
+    "title" : "FR Core CodeSystem Marital Status",
+    "description" : "Identifier type",
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-marital-status.html" : "FR Core ValueSet Patient gender INS ValueSet"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-type-admission",
+    "version" : "2.1.0",
+    "status" : "draft",
+    "name" : "FRCoreCodeSystemTypeAdmission",
+    "title" : "FR Core CodeSystem Type Admission",
+    "description" : "Admission type",
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-type.html" : "FR Core ValueSet Encounter type"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreCodeSystemv2_0203",
+    "title" : "FR Core CodeSystem v2-0203",
+    "description" : "HL7 v2 - Identifier type",
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-identifier-type.html" : "FR Core ValueSet Patient identifier type",
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_G08-TypeIdentifiantPersonne/FHIR/TRE-G08-TypeIdentifiantPersonne",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_G08-TypeIdentifiantPersonne",
+    "title" : null,
+    "description" : "Type d'identifiant de personne",
+    "oids" : ["1.2.250.1.71.1.2.15"],
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R216-HL7RoleCode",
+    "title" : null,
+    "description" : "HL7 roleCode",
+    "oids" : ["2.16.840.1.113883.5.111"],
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-relation-type.html" : "FR Core ValueSet relation type"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R217-ProtectionJuridique/FHIR/TRE-R217-ProtectionJuridique",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R217-ProtectionJuridique",
+    "title" : null,
+    "description" : "Protection juridique",
+    "oids" : ["1.2.250.1.213.1.1.4.327"],
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R226-Dip2iemeCycleNQ/FHIR/TRE-R226-Dip2iemeCycleNQ",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R226-Dip2iemeCycleNQ",
+    "title" : null,
+    "description" : "Diplôme de 2ième cycle non qualifiant",
+    "oids" : ["1.2.250.1.213.1.6.1.118"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R260-HL7RoleClass",
+    "title" : null,
+    "description" : "Rôle de la personne point de contact auprès d'une autre personne repris de la terminologie HL7 v3 RoleClass (https://www.hl7.org/fhir/v3/RoleClass/cs.html)",
+    "oids" : ["2.16.840.1.113883.5.110"],
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R348-FormationSpecialiseeTransversale/FHIR/TRE-R348-FormationSpecialiseeTransversale",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R348-FormationSpecialiseeTransversale",
+    "title" : null,
+    "description" : "Formation Spécialisée Transversale (FST)",
+    "oids" : ["1.2.250.1.213.1.6.1.251"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R36-AutreDiplomeObtenu/FHIR/TRE-R36-AutreDiplomeObtenu",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R36-AutreDiplomeObtenu",
+    "title" : null,
+    "description" : "Autre diplôme obtenu",
+    "oids" : ["1.2.250.1.213.1.6.1.54"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R38-SpecialiteOrdinale",
+    "title" : null,
+    "description" : "Spécialité ordinale",
+    "oids" : ["1.2.250.1.213.2.28"],
+    "uses" : {
+    },
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-specialty.html" : "FR Core ValueSet Practitioner specialty"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R48-DiplomeEtatFrancais/FHIR/TRE-R48-DiplomeEtatFrancais",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R48-DiplomeEtatFrancais",
+    "title" : null,
+    "description" : "Diplôme de l'Etat français",
+    "oids" : ["1.2.250.1.213.1.6.1.31"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R49-DiplomeEtudeSpecialisee/FHIR/TRE-R49-DiplomeEtudeSpecialisee",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R49-DiplomeEtudeSpecialisee",
+    "title" : null,
+    "description" : "Diplôme d'Etudes Spécialisées",
+    "oids" : ["1.2.250.1.213.1.6.1.32"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R50-DESCGroupe1Diplome/FHIR/TRE-R50-DESCGroupe1Diplome",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R50-DESCGroupe1Diplome",
+    "title" : null,
+    "description" : "DESC Groupe 1 (diplôme)",
+    "oids" : ["1.2.250.1.213.1.6.1.48"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R51-DESCGroupe2Diplome/FHIR/TRE-R51-DESCGroupe2Diplome",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R51-DESCGroupe2Diplome",
+    "title" : null,
+    "description" : "DESC Groupe 2 (diplôme)",
+    "oids" : ["1.2.250.1.213.1.6.1.49"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R52-CapaciteDiplome/FHIR/TRE-R52-CapaciteDiplome",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R52-CapaciteDiplome",
+    "title" : null,
+    "description" : "Capacité (diplôme)",
+    "oids" : ["1.2.250.1.213.1.6.1.50"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R53-DiplomePaysEEE/FHIR/TRE-R53-DiplomePaysEEE",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R53-DiplomePaysEEE",
+    "title" : null,
+    "description" : "Diplôme d'un pays de l'EEE",
+    "oids" : ["1.2.250.1.213.1.6.1.51"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R54-DiplomeUniversiteInterUniversitaire/FHIR/TRE-R54-DiplomeUniversiteInterUniversitaire",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R54-DiplomeUniversiteInterUniversitaire",
+    "title" : null,
+    "description" : "Diplôme d'Université ou Inter-Universitaire",
+    "oids" : ["1.2.250.1.213.1.6.1.34"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R55-CertificatEtudeSpeciale/FHIR/TRE-R55-CertificatEtudeSpeciale",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R55-CertificatEtudeSpeciale",
+    "title" : null,
+    "description" : "Certificat d'Etude Spéciale",
+    "oids" : ["1.2.250.1.213.1.6.1.52"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R56-Attestation/FHIR/TRE-R56-Attestation",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R56-Attestation",
+    "title" : null,
+    "description" : "Attestation",
+    "oids" : ["1.2.250.1.213.1.6.1.27"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R57-DiplomeEuropeenEtudeSpecialisee/FHIR/TRE-R57-DiplomeEuropeenEtudeSpecialisee",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R57-DiplomeEuropeenEtudeSpecialisee",
+    "title" : null,
+    "description" : "Diplôme Européen d'Etudes Spécialisées",
+    "oids" : ["1.2.250.1.213.1.6.1.33"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R58-AutreTypeDiplome/FHIR/TRE-R58-AutreTypeDiplome",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "TRE_R58-AutreTypeDiplome",
+    "title" : null,
+    "description" : "Autre type de diplôme",
+    "oids" : ["1.2.250.1.213.1.6.1.53"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+  },
+  {
+    "url" : "urn:ietf:bcp:47",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "Ietf3066",
+    "title" : "Tags for the Identification of Languages",
+    "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
+    "oids" : ["2.16.840.1.113883.6.121"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages"
+  }]
+}

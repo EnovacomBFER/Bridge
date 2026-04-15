@@ -1,0 +1,95 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://enovacom.org/fhir/bridge/EpisodeOfCare/EpisodeOfCareExample> a fhir:EpisodeOfCare ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EpisodeOfCareExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-episodeofcare"^^xsd:anyURI ;
+       fhir:l <https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-episodeofcare>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "fr-FR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr-FR\" lang=\"fr-FR\"><p class=\"res-header-id\"><b>Narratif généré : EpisodeOfCare EpisodeOfCareExample</b></p><a name=\"EpisodeOfCareExample\"> </a><a name=\"hcEpisodeOfCareExample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Langue : fr-FR</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-episodeOfCare-enovacom-bridge.html\">Enovacom Bridge EpisodeOfCare Profile</a></p></div><p><b>identifier</b>: Account number/018714588 (utilisation : usual, )</p><p><b>status</b>: Active</p><p><b>patient</b>: <code>Patient/$id_Patient</code></p><p><b>managingOrganization</b>: <code>Organization/$id_OrganizationEtab</code></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "AN" ] ;
+         fhir:display [ fhir:v "Account number" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/episodeofcare"^^xsd:anyURI ;
+       fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/episodeofcare>
+     ] ;
+     fhir:value [ fhir:v "018714588" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:patient [
+     fhir:l <https://enovacom.org/fhir/bridge/Patient/$id_Patient> ;
+     fhir:reference [ fhir:v "Patient/$id_Patient" ] ;
+     fhir:type [
+       fhir:v "Patient"^^xsd:anyURI ;
+       fhir:l fhir:Patient
+     ] ;
+     fhir:identifier [
+       fhir:use [ fhir:v "usual" ] ;
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+             fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+           ] ;
+           fhir:code [ fhir:v "PI" ] ;
+           fhir:display [ fhir:v "Patient internal identifier" ]
+         ] )
+       ] ;
+       fhir:system [
+         fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/patient"^^xsd:anyURI ;
+         fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/patient>
+       ] ;
+       fhir:value [ fhir:v "010208662441" ]
+     ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:l <https://enovacom.org/fhir/bridge/Organization/$id_OrganizationEtab> ;
+     fhir:reference [ fhir:v "Organization/$id_OrganizationEtab" ] ;
+     fhir:type [
+       fhir:v "Organization"^^xsd:anyURI ;
+       fhir:l fhir:Organization
+     ] ;
+     fhir:identifier [
+       fhir:use [ fhir:v "official" ] ;
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
+             fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
+           ] ;
+           fhir:code [ fhir:v "FINEG" ] ;
+           fhir:display [ fhir:v "FINESS d'entité géographique" ]
+         ] )
+       ] ;
+       fhir:system [
+         fhir:v "https://finess.esante.gouv.fr"^^xsd:anyURI ;
+         fhir:l <https://finess.esante.gouv.fr>
+       ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

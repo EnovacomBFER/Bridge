@@ -1,0 +1,158 @@
+{
+  "codeSystems" : [{
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-discharge-disposition",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetEncounterDischargeDisposition",
+    "title" : "FR Core ValueSet Encounter discharge disposition",
+    "description" : "This value set defines a set of codes that can be used to where the patient left the hospital | Circonstances de sortie de l'hôpital.",
+    "systems" : ["https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-circonstances-sortie",
+    "http://terminology.hl7.org/CodeSystem/discharge-disposition"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetEncounterIdentifierType",
+    "title" : "FR Core ValueSet Encounter identifier type",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose (Encounters).",
+    "systems" : ["https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetEncounterType",
+    "title" : "FR Core ValueSet Encounter type",
+    "description" : "A coded type for an encounter | Jeu de valeurs des types de rencontre.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0007",
+    "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-type-admission"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-location-physical-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetLocationPhysicalType",
+    "title" : "FR Core ValueSet Location physical type",
+    "description" : "French location physical type | Types de lieux physiques pour la France",
+    "systems" : ["https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-physical-type"],
+    "uses" : {
+    },
+    "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-marital-status",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetMaritalStatus",
+    "title" : "FR Core ValueSet Patient gender INS ValueSet",
+    "description" : "Patient Gender for INS : male | female | unknown",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-marital-status"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-patient-contact-role",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetPatientContactRole",
+    "title" : "FR Core ValueSet Patient contact role",
+    "description" : "ValueSet patient contact role",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131",
+    "https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass",
+    "https://mos.esante.gouv.fr/NOS/TRE_R217-ProtectionJuridique/FHIR/TRE-R217-ProtectionJuridique"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-patient-identifier-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetPatientIdentifierType",
+    "title" : "FR Core ValueSet Patient identifier type",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose (identification of a patient).",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203",
+    "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-identifier-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetPractitionerIdentifierType",
+    "title" : "FR Core ValueSet Practitioner identifier type",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose (providers identification)",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_G08-TypeIdentifiantPersonne/FHIR/TRE-G08-TypeIdentifiantPersonne",
+    "http://terminology.hl7.org/CodeSystem/v2-0203",
+    "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"],
+    "uses" : {
+    },
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-specialty",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetPractitionerSpecialty",
+    "title" : "FR Core ValueSet Practitioner specialty",
+    "description" : "The modalities of exercice of the practitioner, registered by an official organization for a period of time.",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"],
+    "uses" : {
+    },
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
+  },
+  {
+    "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-relation-type",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "FRCoreValueSetPatientRelationType",
+    "title" : "FR Core ValueSet relation type",
+    "description" : "ValueSet relation type",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS",
+    "version" : "1.3.0",
+    "status" : "active",
+    "name" : "JDV_J105-EnsembleDiplome-RASS",
+    "title" : null,
+    "description" : "Ensemble des diplômes et qualifications du RASS",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R48-DiplomeEtatFrancais/FHIR/TRE-R48-DiplomeEtatFrancais",
+    "https://mos.esante.gouv.fr/NOS/TRE_R55-CertificatEtudeSpeciale/FHIR/TRE-R55-CertificatEtudeSpeciale",
+    "https://mos.esante.gouv.fr/NOS/TRE_R54-DiplomeUniversiteInterUniversitaire/FHIR/TRE-R54-DiplomeUniversiteInterUniversitaire",
+    "https://mos.esante.gouv.fr/NOS/TRE_R50-DESCGroupe1Diplome/FHIR/TRE-R50-DESCGroupe1Diplome",
+    "https://mos.esante.gouv.fr/NOS/TRE_R226-Dip2iemeCycleNQ/FHIR/TRE-R226-Dip2iemeCycleNQ",
+    "https://mos.esante.gouv.fr/NOS/TRE_R49-DiplomeEtudeSpecialisee/FHIR/TRE-R49-DiplomeEtudeSpecialisee",
+    "https://mos.esante.gouv.fr/NOS/TRE_R52-CapaciteDiplome/FHIR/TRE-R52-CapaciteDiplome",
+    "https://mos.esante.gouv.fr/NOS/TRE_R51-DESCGroupe2Diplome/FHIR/TRE-R51-DESCGroupe2Diplome",
+    "https://mos.esante.gouv.fr/NOS/TRE_R36-AutreDiplomeObtenu/FHIR/TRE-R36-AutreDiplomeObtenu",
+    "https://mos.esante.gouv.fr/NOS/TRE_R58-AutreTypeDiplome/FHIR/TRE-R58-AutreTypeDiplome",
+    "https://mos.esante.gouv.fr/NOS/TRE_R348-FormationSpecialiseeTransversale/FHIR/TRE-R348-FormationSpecialiseeTransversale",
+    "https://mos.esante.gouv.fr/NOS/TRE_R56-Attestation/FHIR/TRE-R56-Attestation",
+    "https://mos.esante.gouv.fr/NOS/TRE_R53-DiplomePaysEEE/FHIR/TRE-R53-DiplomePaysEEE",
+    "https://mos.esante.gouv.fr/NOS/TRE_R57-DiplomeEuropeenEtudeSpecialisee/FHIR/TRE-R57-DiplomeEuropeenEtudeSpecialisee"],
+    "oids" : ["1.2.250.1.213.1.6.1.173"],
+    "sources" : ["1.2.250.1.213.1.6.1.173"],
+    "uses" : {
+    },
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile"
+  }]
+}

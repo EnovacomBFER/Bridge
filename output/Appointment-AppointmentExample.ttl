@@ -1,0 +1,114 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://enovacom.org/fhir/bridge/Appointment/AppointmentExample> a fhir:Appointment ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "AppointmentExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment"^^xsd:anyURI ;
+       fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment>
+     ] [
+       fhir:v "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-appointment"^^xsd:anyURI ;
+       fhir:l <https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-appointment>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "fr-FR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr-FR\" lang=\"fr-FR\"><p class=\"res-header-id\"><b>Narratif généré : Appointment AppointmentExample</b></p><a name=\"AppointmentExample\"> </a><a name=\"hcAppointmentExample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Langue : fr-FR</p><p style=\"margin-bottom: 0px\">Profils: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-appointment.html\">FR Core Appointment Profile</a>, <a href=\"StructureDefinition-appointment-enovacom-bridge.html\">Enovacom Bridge Appointment Profile</a></p></div><p><b>identifier</b>: Identifiant interne/45789465 (utilisation : usual, )</p><p><b>status</b>: Booked</p><p><b>serviceType</b>: <span title=\"Codes :{https://enovacom.org/ig/fhir/bridge/CodeSystem/enovacom-bridge-appointment-service-type BO222}\">FRACTURE DU TIBIA</span></p><p><b>description</b>: FRACTURE DU TIBIA</p><p><b>start</b>: 2025-07-24 23:15:00+0000</p><p><b>end</b>: 2025-07-25 02:15:00+0000</p><p><b>minutesDuration</b>: 180</p><blockquote><p><b>participant</b></p><p><b>actor</b>: Salle (Identifier: <code>http://EnovacomBridge.com/{FinessGeo}/identifiers/location</code>/UNKNOWN (utilisation : usual, ))</p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Patient/99a25f60-d947-4b83-ac27-518f1766b96f\">Patient/99a25f60-d947-4b83-ac27-518f1766b96f</a></p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3\">Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3</a></p><p><b>status</b>: Accepted</p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
+           fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
+         ] ;
+         fhir:code [ fhir:v "INTRN" ] ;
+         fhir:display [ fhir:v "Identifiant interne" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/appointment"^^xsd:anyURI ;
+       fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/appointment>
+     ] ;
+     fhir:value [ fhir:v "45789465" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "booked"] ; # 
+  fhir:serviceType ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://enovacom.org/ig/fhir/bridge/CodeSystem/enovacom-bridge-appointment-service-type"^^xsd:anyURI ;
+         fhir:l <https://enovacom.org/ig/fhir/bridge/CodeSystem/enovacom-bridge-appointment-service-type>
+       ] ;
+       fhir:code [ fhir:v "BO222" ] ;
+       fhir:display [ fhir:v "FRACTURE DU TIBIA" ]
+     ] ) ;
+     fhir:text [ fhir:v "FRACTURE DU TIBIA" ]
+  ] ) ; # 
+  fhir:description [ fhir:v "FRACTURE DU TIBIA"] ; # 
+  fhir:start [ fhir:v "2025-07-24T23:15:00.000Z"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2025-07-25T02:15:00.000Z"^^xsd:dateTime] ; # 
+  fhir:minutesDuration [ fhir:v "180"^^xsd:positiveInteger] ; # 
+  fhir:participant ( [
+     fhir:actor [
+       fhir:identifier [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:system [
+           fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/location"^^xsd:anyURI ;
+           fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/location>
+         ] ;
+         fhir:value [ fhir:v "UNKNOWN" ]
+       ] ;
+       fhir:display [ fhir:v "Salle" ]
+     ] ;
+     fhir:status [ fhir:v "accepted" ]
+  ] [
+     fhir:actor [
+       fhir:l <https://enovacom.org/fhir/bridge/Patient/99a25f60-d947-4b83-ac27-518f1766b96f> ;
+       fhir:reference [ fhir:v "Patient/99a25f60-d947-4b83-ac27-518f1766b96f" ] ;
+       fhir:identifier [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+               fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+             ] ;
+             fhir:code [ fhir:v "PI" ] ;
+             fhir:display [ fhir:v "Patient internal identifier" ]
+           ] )
+         ] ;
+         fhir:system [
+           fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/patient"^^xsd:anyURI ;
+           fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/patient>
+         ] ;
+         fhir:value [ fhir:v "004211313" ]
+       ]
+     ] ;
+     fhir:status [ fhir:v "accepted" ]
+  ] [
+     fhir:actor [
+       fhir:l <https://enovacom.org/fhir/bridge/Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3> ;
+       fhir:reference [ fhir:v "Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3" ] ;
+       fhir:identifier [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:system [
+           fhir:v "http://EnovacomBridge.com/{FinessGeo}/identifiers/practitioner"^^xsd:anyURI ;
+           fhir:l <http://EnovacomBridge.com/{FinessGeo}/identifiers/practitioner>
+         ] ;
+         fhir:value [ fhir:v "CHIRAB" ]
+       ]
+     ] ;
+     fhir:status [ fhir:v "accepted" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

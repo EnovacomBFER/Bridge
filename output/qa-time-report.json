@@ -1,0 +1,849 @@
+{
+  "date" : "Wed, 15 Apr, 2026 14:29:25 +0200",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "\\fsh-generated\\resources\\ImplementationGuide-EnovacomBridge.json",
+    "size" : 8357,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 39,
+      "length" : 6
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 40,
+      "length" : 9
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 40,
+      "length" : 72
+    },
+    {
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 7042
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 57,
+      "length" : 189
+    },
+    {
+      "activity" : "generate2",
+      "start" : 87,
+      "length" : 1064
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 281,
+      "length" : 2
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 305,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-AppointmentExample.json",
+    "size" : 2330,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 5
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 40,
+      "length" : 611
+    },
+    {
+      "activity" : "validate",
+      "start" : 53,
+      "length" : 654
+    },
+    {
+      "activity" : "generate1",
+      "start" : 57,
+      "length" : 65
+    },
+    {
+      "activity" : "generate2",
+      "start" : 88,
+      "length" : 381
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-EncounterVisitExample.json",
+    "size" : 5583,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 91
+    },
+    {
+      "activity" : "validate",
+      "start" : 54,
+      "length" : 58
+    },
+    {
+      "activity" : "generate1",
+      "start" : 57,
+      "length" : 86
+    },
+    {
+      "activity" : "generate2",
+      "start" : 88,
+      "length" : 383
+    },
+    {
+      "activity" : "generateExampleZip",
+      "start" : 281,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/EpisodeOfCare-EpisodeOfCareExample.json",
+    "size" : 1560,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 54,
+      "length" : 15
+    },
+    {
+      "activity" : "generate1",
+      "start" : 57,
+      "length" : 54
+    },
+    {
+      "activity" : "generate2",
+      "start" : 88,
+      "length" : 328
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-1c783afa-9981-4977-be63-8859f0a8fde5.json",
+    "size" : 2510,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 54,
+      "length" : 72
+    },
+    {
+      "activity" : "generate1",
+      "start" : 57,
+      "length" : 85
+    },
+    {
+      "activity" : "generate2",
+      "start" : 89,
+      "length" : 363
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-6b70aeba-4024-4cf0-8959-2d1d6cf15597.json",
+    "size" : 1776,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 54,
+      "length" : 39
+    },
+    {
+      "activity" : "generate1",
+      "start" : 58,
+      "length" : 76
+    },
+    {
+      "activity" : "generate2",
+      "start" : 89,
+      "length" : 282
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 305,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-z65g3ad4-4512-4477-biu3-8719haf7d75.json",
+    "size" : 836,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 54,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 58,
+      "length" : 59
+    },
+    {
+      "activity" : "generate2",
+      "start" : 89,
+      "length" : 272
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/SearchParameter-appointment-actor-identifier.json",
+    "size" : 554,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 12
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 58,
+      "length" : 80
+    },
+    {
+      "activity" : "generate2",
+      "start" : 90,
+      "length" : 334
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 281,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/SearchParameter-encounter-location-identifier.json",
+    "size" : 606,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 39,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 58,
+      "length" : 82
+    },
+    {
+      "activity" : "generate2",
+      "start" : 90,
+      "length" : 403
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/SearchParameter-patient-creation-date.json",
+    "size" : 685,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 58,
+      "length" : 78
+    },
+    {
+      "activity" : "generate2",
+      "start" : 90,
+      "length" : 389
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-PatientCreationDate.json",
+    "size" : 1591,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 9
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 39,
+      "length" : 9
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 89
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2511
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 58,
+      "length" : 210
+    },
+    {
+      "activity" : "generate2",
+      "start" : 91,
+      "length" : 7493
+    },
+    {
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 697
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 281,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-appointment-enovacom-bridge.json",
+    "size" : 9519,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 39,
+      "length" : 48
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 178
+    },
+    {
+      "activity" : "validate",
+      "start" : 44,
+      "length" : 495
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 58,
+      "length" : 1451
+    },
+    {
+      "activity" : "generate2",
+      "start" : 98,
+      "length" : 4884
+    },
+    {
+      "activity" : "generate2",
+      "start" : 121,
+      "length" : 559
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 281,
+      "length" : 11
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 305,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-encounter-visit-enovacom-bridge.json",
+    "size" : 14572,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 6
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 40,
+      "length" : 58
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 107
+    },
+    {
+      "activity" : "validate",
+      "start" : 45,
+      "length" : 370
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 60,
+      "length" : 1623
+    },
+    {
+      "activity" : "generate2",
+      "start" : 103,
+      "length" : 4923
+    },
+    {
+      "activity" : "generate2",
+      "start" : 121,
+      "length" : 353
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 281,
+      "length" : 13
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 305,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-episodeOfCare-enovacom-bridge.json",
+    "size" : 5715,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 4
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 40,
+      "length" : 18
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 26
+    },
+    {
+      "activity" : "validate",
+      "start" : 45,
+      "length" : 122
+    },
+    {
+      "activity" : "generate1",
+      "start" : 61,
+      "length" : 730
+    },
+    {
+      "activity" : "generate2",
+      "start" : 108,
+      "length" : 3969
+    },
+    {
+      "activity" : "generate2",
+      "start" : 122,
+      "length" : 115
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 281,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-patient-enovacom-bridge.json",
+    "size" : 27675,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 6
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 10
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 40,
+      "length" : 57
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 168
+    },
+    {
+      "activity" : "validate",
+      "start" : 45,
+      "length" : 542
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 62,
+      "length" : 2711
+    },
+    {
+      "activity" : "generate2",
+      "start" : 112,
+      "length" : 4559
+    },
+    {
+      "activity" : "generate2",
+      "start" : 122,
+      "length" : 1020
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 281,
+      "length" : 23
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 305,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-practitioner-enovacom-bridge.json",
+    "size" : 11226,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 40,
+      "length" : 36
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 95
+    },
+    {
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 360
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 65,
+      "length" : 1575
+    },
+    {
+      "activity" : "generate2",
+      "start" : 117,
+      "length" : 3404
+    },
+    {
+      "activity" : "generate2",
+      "start" : 123,
+      "length" : 389
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 281,
+      "length" : 13
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 305,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "\\fsh-generated\\includes\\fsh-link-references.md",
+    "size" : 1223,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "\\fsh-generated\\includes\\menu.xml",
+    "size" : 2423,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "\\input\\pagecontent\\api.md",
+    "size" : 10280,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 31
+    }]
+  },
+  {
+    "name" : "\\input\\pagecontent\\authentification.md",
+    "size" : 1092,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "\\input\\pagecontent\\documentation.md",
+    "size" : 3680,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "\\input\\pagecontent\\index.md",
+    "size" : 1944,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "\\input\\pagecontent\\modeleEditeurAbo.md",
+    "size" : 10060,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "\\input\\pagecontent\\modeleEditeurGet.md",
+    "size" : 11196,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 28
+    }]
+  },
+  {
+    "name" : "\\input\\pagecontent\\modeleEtab.md",
+    "size" : 2175,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "\\input\\pagecontent\\other.md",
+    "size" : 725,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "\\input\\pagecontent\\subscription.md",
+    "size" : 924,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "\\template\\config",
+    "size" : 0,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "\\template\\config\\_config.yml",
+    "size" : 140,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "\\temp\\pages\\_includes\\artifacts.xml",
+    "size" : 9637,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 120,
+      "length" : 1
+    }]
+  }]
+}

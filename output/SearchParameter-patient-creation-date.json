@@ -1,0 +1,32 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "patient-creation-date",
+  "meta" : {
+    "versionId" : "1",
+    "lastUpdated" : "2025-11-26T15:30:54.210+01:00",
+    "source" : "#rXoDTkKE488QKJ8H"
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : SearchParameter patient-creation-date</b></p><a name=\"patient-creation-date\"> </a><a name=\"hcpatient-creation-date\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version : 1; Dernière mise à jour : 2025-11-26 15:30:54+0100; </p><p style=\"margin-bottom: 0px\">Information Source: #rXoDTkKE488QKJ8H</p></div><h2>creation-date</h2><p>Paramètre <code>creation-date</code>:<code>date</code></p><div><p>Paramètre de recherche pour récupérer une ressource Patient par sa date de création.</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td></tr><tr><td>Expression</td><td><code>Patient.extension('https://enovacom.org/fhir/bridge/StructureDefinition/enovacom-patient-creation-date')</code></td></tr><tr><td>Mode de traitement</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://enovacom.org/fhir/SearchParameter/patient-creation-date",
+  "version" : "1.1.0",
+  "name" : "creation-date",
+  "status" : "active",
+  "date" : "2026-04-15T14:29:25+02:00",
+  "publisher" : "Enovacom",
+  "contact" : [{
+    "name" : "Enovacom",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://enovacom.com"
+    }]
+  }],
+  "description" : "Paramètre de recherche pour récupérer une ressource Patient par sa date de création.",
+  "code" : "creation-date",
+  "base" : ["Patient"],
+  "type" : "date",
+  "expression" : "Patient.extension('https://enovacom.org/fhir/bridge/StructureDefinition/enovacom-patient-creation-date')",
+  "xpathUsage" : "normal"
+}

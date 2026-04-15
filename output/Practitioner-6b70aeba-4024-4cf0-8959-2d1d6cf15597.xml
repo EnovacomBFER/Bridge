@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="6b70aeba-4024-4cf0-8959-2d1d6cf15597"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"/>
+    <profile value="https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-practitioner"/>
+  </meta>
+  <language value="fr-FR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-FR" lang="fr-FR"><p class="res-header-id"><b>Narratif généré : Practitioner 6b70aeba-4024-4cf0-8959-2d1d6cf15597</b></p><a name="6b70aeba-4024-4cf0-8959-2d1d6cf15597"> </a><a name="hc6b70aeba-4024-4cf0-8959-2d1d6cf15597"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Langue : fr-FR</p><p style="margin-bottom: 0px">Profils: <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html">FR Core Practitioner Profile</a>, <a href="StructureDefinition-practitioner-enovacom-bridge.html">Enovacom Bridge Practitioner Profile</a></p></div><p><b>identifier</b>: N° ADELI/000000000 (utilisation : official, ), Identifiant interne/XXXXXX (utilisation : usual, ), N° RPPS/10100000000 (utilisation : official, )</p><p><b>active</b>: true</p><p><b>name</b>: Practitioner UNKNOWN </p><p><b>address</b>: [2 rue des tests  MARSEILLE 13008 100](work)</p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+        <code value="ADELI"/>
+        <display value="N° ADELI"/>
+      </coding>
+    </type>
+    <system value="https://adeli.esante.gouv.fr"/>
+    <value value="000000000"/>
+  </identifier>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+        <code value="INTRN"/>
+        <display value="Identifiant interne"/>
+      </coding>
+    </type>
+    <system value="http://EnovacomBridge.com/130000000/identifiers/practitioner"/>
+    <value value="XXXXXX"/>
+  </identifier>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+        <code value="RPPS"/>
+        <display value="N° RPPS"/>
+      </coding>
+    </type>
+    <system value="https://rpps.esante.gouv.fr"/>
+    <value value="10100000000"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="usual"/>
+    <family value="UNKNOWN"/>
+    <given value="Practitioner"/>
+  </name>
+  <address>
+    <use value="work"/>
+    <text value="[2 rue des tests  MARSEILLE 13008 100]"/>
+    <line value="2 rue des tests"/>
+    <city value="MARSEILLE"/>
+    <postalCode value="13008"/>
+    <country value="100"/>
+  </address>
+</Practitioner>

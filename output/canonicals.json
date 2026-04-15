@@ -1,0 +1,70 @@
+[{
+  "id" : "appointment-actor-identifier",
+  "type" : "SearchParameter",
+  "url" : "https://enovacom.org/fhir/SearchParameter/appointment-actor-identifier",
+  "version" : "1.1.0",
+  "name" : "actor-identifier"
+},
+{
+  "id" : "patient-creation-date",
+  "type" : "SearchParameter",
+  "url" : "https://enovacom.org/fhir/SearchParameter/patient-creation-date",
+  "version" : "1.1.0",
+  "name" : "creation-date"
+},
+{
+  "id" : "EnovacomBridge",
+  "type" : "ImplementationGuide",
+  "url" : "https://enovacom.org/fhir/bridge/ImplementationGuide/EnovacomBridge",
+  "version" : "1.1.0",
+  "name" : "EnovacomBridgeIG"
+},
+{
+  "id" : "encounter-location-identifier",
+  "type" : "SearchParameter",
+  "url" : "https://enovacom.org/fhir/bridge/SearchParameter/encounter-location-identifier",
+  "version" : "1.1.0",
+  "name" : "location-identifier"
+},
+{
+  "id" : "PatientCreationDate",
+  "type" : "StructureDefinition",
+  "url" : "https://enovacom.org/fhir/bridge/StructureDefinition/enovacom-patient-creation-date",
+  "version" : "1.1.0",
+  "name" : "PatientCreationDate"
+},
+{
+  "id" : "appointment-enovacom-bridge",
+  "type" : "StructureDefinition",
+  "url" : "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-appointment",
+  "version" : "1.1.0",
+  "name" : "AppointmentProfile_ENOVACOM_BRIDGE"
+},
+{
+  "id" : "encounter-visit-enovacom-bridge",
+  "type" : "StructureDefinition",
+  "url" : "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-encounter-visit",
+  "version" : "1.1.0",
+  "name" : "EncounterVisitProfile_ENOVACOM_BRIDGE"
+},
+{
+  "id" : "episodeOfCare-enovacom-bridge",
+  "type" : "StructureDefinition",
+  "url" : "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-episodeofcare",
+  "version" : "1.1.0",
+  "name" : "EpisodeOfCareProfile_ENOVACOM_BRIDGE"
+},
+{
+  "id" : "patient-enovacom-bridge",
+  "type" : "StructureDefinition",
+  "url" : "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-patient",
+  "version" : "1.1.0",
+  "name" : "PatientProfile_ENOVACOM_BRIDGE"
+},
+{
+  "id" : "practitioner-enovacom-bridge",
+  "type" : "StructureDefinition",
+  "url" : "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-practitioner",
+  "version" : "1.1.0",
+  "name" : "PractitionerProfile_ENOVACOM_BRIDGE"
+}]

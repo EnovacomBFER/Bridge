@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="1c783afa-9981-4977-be63-8859f0a8fde5"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"/>
+    <profile value="https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-patient"/>
+  </meta>
+  <language value="fr-FR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-FR" lang="fr-FR"><p class="res-header-id"><b>Narratif généré : Patient 1c783afa-9981-4977-be63-8859f0a8fde5</b></p><a name="1c783afa-9981-4977-be63-8859f0a8fde5"> </a><a name="hc1c783afa-9981-4977-be63-8859f0a8fde5"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Langue : fr-FR</p><p style="margin-bottom: 0px">Profils: <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html">FR Core Patient Profile</a>, <a href="StructureDefinition-patient-enovacom-bridge.html">Enovacom Bridge Patient Profile</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"> SOLO Yan PEDRO  Male, Date de Naissance :1975-04-19 ( Patient internal identifier: 05560 (use: usual, ))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="L'enregistrement est actif">Actif :</td><td>true</td><td style="background-color: #f3f5da" title="Statut Marital connu du Patient">Statut Marital :</td><td colspan="3"><span title="Codes :{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}">Married</span></td></tr><tr><td style="background-color: #f3f5da" title="Noms alternatifs (voir plus bas)">Nom alternatif :</td><td colspan="3"> SOLO Yan PEDRO (Official)</td></tr><tr><td style="background-color: #f3f5da" title="Moyens de contacter le Patient">Coordonnées</td><td colspan="3"><ul><li>ph: 04 60 00 02 00(Home)</li><li>[483 RUE DES CARCASSES  CORRELIA 34570 FRA](home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Liens du patient">Liens :</td><td colspan="3"><ul><li>Organisation gestionnaire: <a href="Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8">Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="This extension allowos to know the patient's resource creation date .Extension permettant de connaître la date de création de la ressource Patient."><a href="StructureDefinition-PatientCreationDate.html">Extension Enovacom Patient Creation Date</a></td><td colspan="3">2025-11-27</td></tr><tr><td style="background-color: #f3f5da" title="The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements."><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-patient-birthPlace.html">Patient Birth Place</a></td><td colspan="3">FRA </td></tr><tr><td style="background-color: #f3f5da" title="Reliabilility of the patient's identity | Précision sur le degré de fiabilité de l'identité du patient (si provisoire, validé... avec la justification : quelle type de pièce d'identité ?) avec la méthode de collection">FR Core Patient Ident Reliability Extension:</td><td colspan="3"><ul><li>identityStatus: <a href="https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-PROV">FR Core CodeSystem v2-0445: PROV</a> (Identité provisoire)</li></ul></td></tr></table></div>
+  </text>
+  <extension url="https://enovacom.org/fhir/bridge/StructureDefinition/enovacom-patient-creation-date">
+    <valueDateTime value="2025-11-27"/>
+  </extension>
+  <extension url="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability">
+    <extension url="identityStatus">
+      <valueCoding>
+        <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445"/>
+        <code value="PROV"/>
+        <display value="Identité provisoire"/>
+      </valueCoding>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+    <valueAddress>
+      <country value="FRA"/>
+    </valueAddress>
+  </extension>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PI"/>
+        <display value="Patient internal identifier"/>
+      </coding>
+    </type>
+    <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/patient"/>
+    <value value="05560"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value=" SOLO Yan PEDRO "/>
+    <family value="SOLO Yan"/>
+    <given value="PEDRO"/>
+    <prefix value="M"/>
+  </name>
+  <name>
+    <use value="usual"/>
+    <text value=" SOLO Yan PEDRO "/>
+    <family value="SOLO Yan"/>
+    <given value="PEDRO"/>
+    <prefix value="M"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="04 60 00 02 00"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1975-04-19"/>
+  <address>
+    <use value="home"/>
+    <text value="[483 RUE DES CARCASSES  CORRELIA 34570 FRA]"/>
+    <line value="483 RUE DES CARCASSES"/>
+    <city value="CORRELIA"/>
+    <postalCode value="34570"/>
+    <country value="FRA"/>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="M"/>
+      <display value="Married"/>
+    </coding>
+  </maritalStatus>
+  <managingOrganization>
+    <reference value="Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8"/>
+    <type value="Organization"/>
+  </managingOrganization>
+</Patient>

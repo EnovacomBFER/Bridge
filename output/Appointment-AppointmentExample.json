@@ -1,0 +1,78 @@
+{
+  "resourceType" : "Appointment",
+  "id" : "AppointmentExample",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment",
+    "https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-appointment"]
+  },
+  "language" : "fr-FR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr-FR\" lang=\"fr-FR\"><p class=\"res-header-id\"><b>Narratif généré : Appointment AppointmentExample</b></p><a name=\"AppointmentExample\"> </a><a name=\"hcAppointmentExample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Langue : fr-FR</p><p style=\"margin-bottom: 0px\">Profils: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-appointment.html\">FR Core Appointment Profile</a>, <a href=\"StructureDefinition-appointment-enovacom-bridge.html\">Enovacom Bridge Appointment Profile</a></p></div><p><b>identifier</b>: Identifiant interne/45789465\u00a0(utilisation :\u00a0usual,\u00a0)</p><p><b>status</b>: Booked</p><p><b>serviceType</b>: <span title=\"Codes :{https://enovacom.org/ig/fhir/bridge/CodeSystem/enovacom-bridge-appointment-service-type BO222}\">FRACTURE DU TIBIA</span></p><p><b>description</b>: FRACTURE DU TIBIA</p><p><b>start</b>: 2025-07-24 23:15:00+0000</p><p><b>end</b>: 2025-07-25 02:15:00+0000</p><p><b>minutesDuration</b>: 180</p><blockquote><p><b>participant</b></p><p><b>actor</b>: Salle (Identifier: <code>http://EnovacomBridge.com/{FinessGeo}/identifiers/location</code>/UNKNOWN\u00a0(utilisation :\u00a0usual,\u00a0))</p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Patient/99a25f60-d947-4b83-ac27-518f1766b96f\">Patient/99a25f60-d947-4b83-ac27-518f1766b96f</a></p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3\">Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3</a></p><p><b>status</b>: Accepted</p></blockquote></div>"
+  },
+  "identifier" : [{
+    "use" : "usual",
+    "type" : {
+      "coding" : [{
+        "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+        "code" : "INTRN",
+        "display" : "Identifiant interne"
+      }]
+    },
+    "system" : "http://EnovacomBridge.com/{FinessGeo}/identifiers/appointment",
+    "value" : "45789465"
+  }],
+  "status" : "booked",
+  "serviceType" : [{
+    "coding" : [{
+      "system" : "https://enovacom.org/ig/fhir/bridge/CodeSystem/enovacom-bridge-appointment-service-type",
+      "code" : "BO222",
+      "display" : "FRACTURE DU TIBIA"
+    }],
+    "text" : "FRACTURE DU TIBIA"
+  }],
+  "description" : "FRACTURE DU TIBIA",
+  "start" : "2025-07-24T23:15:00.000Z",
+  "end" : "2025-07-25T02:15:00.000Z",
+  "minutesDuration" : 180,
+  "participant" : [{
+    "actor" : {
+      "identifier" : {
+        "use" : "usual",
+        "system" : "http://EnovacomBridge.com/{FinessGeo}/identifiers/location",
+        "value" : "UNKNOWN"
+      },
+      "display" : "Salle"
+    },
+    "status" : "accepted"
+  },
+  {
+    "actor" : {
+      "reference" : "Patient/99a25f60-d947-4b83-ac27-518f1766b96f",
+      "identifier" : {
+        "use" : "usual",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "PI",
+            "display" : "Patient internal identifier"
+          }]
+        },
+        "system" : "http://EnovacomBridge.com/{FinessGeo}/identifiers/patient",
+        "value" : "004211313"
+      }
+    },
+    "status" : "accepted"
+  },
+  {
+    "actor" : {
+      "reference" : "Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3",
+      "identifier" : {
+        "use" : "usual",
+        "system" : "http://EnovacomBridge.com/{FinessGeo}/identifiers/practitioner",
+        "value" : "CHIRAB"
+      }
+    },
+    "status" : "accepted"
+  }]
+}

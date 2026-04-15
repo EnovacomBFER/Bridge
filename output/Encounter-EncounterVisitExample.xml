@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="EncounterVisitExample"/>
+  <meta>
+    <profile value="https://enovacom.org/ig/fhir/bridge/StructureDefinition/enovacom-bridge-encounter-visit"/>
+    <profile value="https://enovacom.com/ig/fhir/StructureDefinition/fr-core-encounter-visit"/>
+  </meta>
+  <language value="fr-FR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-FR" lang="fr-FR"><p class="res-header-id"><b>Narratif généré : Encounter EncounterVisitExample</b></p><a name="EncounterVisitExample"> </a><a name="hcEncounterVisitExample"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Langue : fr-FR</p><p style="margin-bottom: 0px">Profils: <a href="StructureDefinition-encounter-visit-enovacom-bridge.html">Enovacom Bridge Encounter Visit Profile</a>, <code>https://enovacom.com/ig/fhir/StructureDefinition/fr-core-encounter-visit</code></p></div><p><b>identifier</b>: Visit Number/3091281 (utilisation : usual, )</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title="Codes :{http://terminology.hl7.org/CodeSystem/v2-0007 R}">Routine</span></p><p><b>subject</b>: <a href="Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7">Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7</a></p><p><b>episodeOfCare</b>: <a href="EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7">EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes :{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}">Médecin assumant la responsabilité médicale</span></td><td><a href="Practitioner/3ba92191-b334-4749-9bd8-1a85d3556ca6">IVANESCU CHASTANG</a></td></tr></table><p><b>period</b>: 2024-10-03 08:00:00+0000 --&gt; 2024-10-04 00:00:00+0000</p><h3>Hospitalizations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Origin</b></td><td><b>AdmitSource</b></td><td><b>Destination</b></td></tr><tr><td style="display: none">*</td><td>Etablissement de provenance (Identifier: <code>https://finess.esante.gouv.fr</code>/770000446)</td><td><span title="Codes :{http://terminology.hl7.org/CodeSystem/admit-source gp}">General Practitioner referral</span></td><td>Identifier: FINESS d'entité géographique/123456</td></tr></table><blockquote><p><b>location</b></p><p><b>location</b>: <a href="Location/2ea92154-b334-4812-9ae7-1a85d3456er4">Unité d'hébergement</a></p></blockquote><blockquote><p><b>location</b></p><p><b>location</b>: <a href="Location/i5a89154-p264-4812-1ak7-1a85d344785p">Unité de responsabilité médicale</a></p></blockquote><p><b>serviceProvider</b>: <a href="Organization/2jg92146-b642-4ae2-71m7-4l8m2345ed4j">Etablissement de rattachement</a></p></div>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type"/>
+        <code value="VN"/>
+        <display value="Visit Number"/>
+      </coding>
+    </type>
+    <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/encounter"/>
+    <value value="3091281"/>
+  </identifier>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+    <display value="ambulatory"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0007"/>
+      <code value="R"/>
+      <display value="Routine"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7"/>
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+          <code value="PI"/>
+          <display value="Patient internal identifier"/>
+        </coding>
+      </type>
+      <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/patient"/>
+      <value value="010208662441"/>
+    </identifier>
+  </subject>
+  <episodeOfCare>
+    <reference value="EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7"/>
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+          <code value="AN"/>
+          <display value="Account number"/>
+        </coding>
+      </type>
+      <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/episodeofcare"/>
+      <value value="018714588"/>
+    </identifier>
+  </episodeOfCare>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="ATND"/>
+        <display value="attender"/>
+      </coding>
+      <text value="Médecin assumant la responsabilité médicale"/>
+    </type>
+    <individual>
+      <reference value="Practitioner/3ba92191-b334-4749-9bd8-1a85d3556ca6"/>
+      <identifier>
+        <type>
+          <coding>
+            <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+            <code value="RPPS"/>
+            <display value="N° RPPS"/>
+          </coding>
+        </type>
+        <system value="https://rpps.esante.gouv.fr"/>
+        <value value="10100473148"/>
+      </identifier>
+      <display value="IVANESCU CHASTANG"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2024-10-03T08:00:00Z"/>
+    <end value="2024-10-04T00:00:00Z"/>
+  </period>
+  <hospitalization>
+    <origin>
+      <identifier>
+        <system value="https://finess.esante.gouv.fr"/>
+        <value value="770000446"/>
+      </identifier>
+      <display value="Etablissement de provenance"/>
+    </origin>
+    <admitSource>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/admit-source"/>
+        <code value="gp"/>
+        <display value="General Practitioner referral"/>
+      </coding>
+    </admitSource>
+    <destination>
+      <identifier>
+        <type>
+          <coding>
+            <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+            <code value="FINEG"/>
+            <display value="FINESS d'entité géographique"/>
+          </coding>
+        </type>
+        <system value="https://finess.esante.gouv.fr"/>
+        <value value="123456"/>
+      </identifier>
+    </destination>
+  </hospitalization>
+  <location>
+    <location>
+      <reference value="Location/2ea92154-b334-4812-9ae7-1a85d3456er4"/>
+      <identifier>
+        <use value="usual"/>
+        <type>
+          <coding>
+            <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type"/>
+            <code value="INTRN"/>
+            <display value="Identifiant interne"/>
+          </coding>
+        </type>
+        <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/locationUFH"/>
+        <value value="1412"/>
+      </identifier>
+      <display value="Unité d'hébergement"/>
+    </location>
+  </location>
+  <location>
+    <location>
+      <reference value="Location/i5a89154-p264-4812-1ak7-1a85d344785p"/>
+      <identifier>
+        <use value="usual"/>
+        <type>
+          <coding>
+            <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type"/>
+            <code value="INTRN"/>
+            <display value="Identifiant interne"/>
+          </coding>
+        </type>
+        <system value="http://EnovacomBridge.com/{FinessGeo}/identifiers/locationUM"/>
+        <value value="1412"/>
+      </identifier>
+      <display value="Unité de responsabilité médicale"/>
+    </location>
+  </location>
+  <serviceProvider>
+    <reference value="Organization/2jg92146-b642-4ae2-71m7-4l8m2345ed4j"/>
+    <identifier>
+      <use value="official"/>
+      <type>
+        <coding>
+          <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+          <code value="FINEG"/>
+          <display value="FINESS d'entité géographique"/>
+        </coding>
+      </type>
+      <system value="https://finess.esante.gouv.fr"/>
+      <value value="750700015"/>
+    </identifier>
+    <display value="Etablissement de rattachement"/>
+  </serviceProvider>
+</Encounter>

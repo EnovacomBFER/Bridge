@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="appointment-actor-identifier"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : SearchParameter appointment-actor-identifier</b></p><a name="appointment-actor-identifier"> </a><a name="hcappointment-actor-identifier"> </a><h2>actor-identifier</h2><p>Paramètre <code>actor-identifier</code>:<code>token</code></p><div><p>Paramètre de recherche pour récupérer une ressource Appointment par la salle de réalisation de l'acte du rendez-vous.</p>
+</div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a></td></tr><tr><td>Expression</td><td><code>Appointment.participant.actor.identifier</code></td></tr><tr><td>Mode de traitement</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>
+  </text>
+  <url value="https://enovacom.org/fhir/SearchParameter/appointment-actor-identifier"/>
+  <version value="1.1.0"/>
+  <name value="actor-identifier"/>
+  <status value="active"/>
+  <date value="2026-04-15T14:29:25+02:00"/>
+  <publisher value="Enovacom"/>
+  <contact>
+    <name value="Enovacom"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://enovacom.com"/>
+    </telecom>
+  </contact>
+  <description value="Paramètre de recherche pour récupérer une ressource Appointment par la salle de réalisation de l'acte du rendez-vous."/>
+  <code value="actor-identifier"/>
+  <base value="Appointment"/>
+  <type value="token"/>
+  <expression value="Appointment.participant.actor.identifier"/>
+  <xpathUsage value="normal"/>
+</SearchParameter>

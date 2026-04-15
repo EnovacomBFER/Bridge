@@ -1,0 +1,40 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://enovacom.org/fhir/bridge/SearchParameter/encounter-location-identifier> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "encounter-location-identifier"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : SearchParameter encounter-location-identifier</b></p><a name=\"encounter-location-identifier\"> </a><a name=\"hcencounter-location-identifier\"> </a><h2>location-identifier</h2><p>Paramètre <code>location-identifier</code>:<code>token</code></p><div><p>Paramètre de recherche pour récupérer une ressource Encounter par l'identifiant métier de la location (Unité d'hébergement ou de responsabilité médicale).</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/encounter.html\">Encounter</a></td></tr><tr><td>Expression</td><td><code>Encounter.location.location.identifier</code></td></tr><tr><td>Mode de traitement</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://enovacom.org/fhir/bridge/SearchParameter/encounter-location-identifier"^^xsd:anyURI ;
+     fhir:l <https://enovacom.org/fhir/bridge/SearchParameter/encounter-location-identifier>
+  ] ; # 
+  fhir:version [ fhir:v "1.1.0"] ; # 
+  fhir:name [ fhir:v "location-identifier"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2026-04-15T14:29:25+02:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Enovacom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Enovacom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://enovacom.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Paramètre de recherche pour récupérer une ressource Encounter par l'identifiant métier de la location (Unité d'hébergement ou de responsabilité médicale)."] ; # 
+  fhir:code [ fhir:v "location-identifier"] ; # 
+  fhir:base ( [ fhir:v "Encounter"] ) ; # 
+  fhir:type [ fhir:v "token"] ; # 
+  fhir:expression [ fhir:v "Encounter.location.location.identifier"] ; # 
+  fhir:xpathUsage [ fhir:v "normal"] . # 
+
+# -------------------------------------------------------------------------------------
+
