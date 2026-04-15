@@ -1,0 +1,44 @@
+@startuml
+
+frame "Dossier" {
+artifact "EpisodeOfCare" as dossier
+frame "Séjour" {
+artifact "EncounterVN" as sej
+artifact "Practitioner" as medResp
+}
+frame "RDV" {
+artifact "Appointment" as rdv
+artifact "Practitioner" as medRdv
+}
+}
+frame "Structure" {
+artifact "OrganizationEtab" as etab
+}
+artifact "Patient" as pati
+
+
+' ##########
+' #  VENUES #
+' ##########
+sej --> etab
+sej --> medResp
+sej --> pati
+sej --> dossier
+sej --> rdv
+
+' ##########
+' #  RDV #
+' ##########
+rdv --> pati
+rdv --> medRdv
+
+
+' ##########
+' # PATIENT #
+' ##########
+pati --> etab
+dossier --> pati
+dossier --> etab
+
+
+@enduml
