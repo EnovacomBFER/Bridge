@@ -11,7 +11,7 @@
   <name value="EnovacomBridgeIG"/>
   <title value="Guide D'implementation Bridge"/>
   <status value="draft"/>
-  <date value="2026-04-15T14:29:25+02:00"/>
+  <date value="2026-10-14T17:02:42+02:00"/>
   <publisher value="Enovacom"/>
   <contact>
     <name value="Enovacom"/>
@@ -30,7 +30,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.1.0"/>
+    <version value="7.4.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -38,7 +38,7 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="5.2.0"/>
+    <version value="5.3.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_fr_core">
     <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
@@ -667,6 +667,22 @@
         </extension>
         <nameUrl value="modeleEditeurAbo.html"/>
         <title value="Modèle Editeur Abonnement"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="modeleEditeurPostActe.html"/>
+        </extension>
+        <nameUrl value="modeleEditeurPostActe.html"/>
+        <title value="Modèle Editeur Post actes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="modeleEtabGetAndDeleteActe.html"/>
+        </extension>
+        <nameUrl value="modeleEtabGetAndDeleteActe.html"/>
+        <title value="Modèle Etablissement Get actes"/>
         <generation value="markdown"/>
       </page>
       <page>

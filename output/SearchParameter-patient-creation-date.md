@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://enovacom.org/fhir/SearchParameter/patient-creation-date | *Version*:1.1.0 |
-| Active as of 2026-04-15 | *Computable Name*:creation-date |
+| Active as of 2026-10-14 | *Computable Name*:creation-date |
 
  
 Paramètre de recherche pour récupérer une ressource Patient par sa date de création. 
@@ -31,7 +31,7 @@ Paramètre de recherche pour récupérer une ressource Patient par sa date de cr
   "version" : "1.1.0",
   "name" : "creation-date",
   "status" : "active",
-  "date" : "2026-04-15T14:29:25+02:00",
+  "date" : "2026-10-14T17:02:42+02:00",
   "publisher" : "Enovacom",
   "contact" : [{
     "name" : "Enovacom",
