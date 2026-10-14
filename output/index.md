@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://enovacom.org/fhir/bridge/ImplementationGuide/EnovacomBridge | *Version*:1.1.0 |
-| Draft as of 2026-04-15 | *Computable Name*:EnovacomBridgeIG |
+| Draft as of 2026-10-14 | *Computable Name*:EnovacomBridgeIG |
 
 ### Introduction
 
@@ -63,7 +63,7 @@ Les syntaxes retenue sont le JSON et le XML pour la représentation des ressourc
   "name" : "EnovacomBridgeIG",
   "title" : "Guide D'implementation Bridge",
   "status" : "draft",
-  "date" : "2026-04-15T14:29:25+02:00",
+  "date" : "2026-10-14T17:02:42+02:00",
   "publisher" : "Enovacom",
   "contact" : [{
     "name" : "Enovacom",
@@ -84,7 +84,7 @@ Les syntaxes retenue sont le JSON et le XML pour la représentation des ressourc
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.1.0"
+    "version" : "7.4.0"
   },
   {
     "id" : "hl7ext",
@@ -94,7 +94,7 @@ Les syntaxes retenue sont le JSON et le XML pour la représentation des ressourc
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.2.0"
+    "version" : "5.3.0"
   },
   {
     "id" : "hl7_fhir_fr_core",
@@ -897,6 +897,24 @@ Les syntaxes retenue sont le JSON et le XML pour la représentation des ressourc
         }],
         "nameUrl" : "modeleEditeurAbo.html",
         "title" : "Modèle Editeur Abonnement",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "modeleEditeurPostActe.html"
+        }],
+        "nameUrl" : "modeleEditeurPostActe.html",
+        "title" : "Modèle Editeur Post actes",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "modeleEtabGetAndDeleteActe.html"
+        }],
+        "nameUrl" : "modeleEtabGetAndDeleteActe.html",
+        "title" : "Modèle Etablissement Get actes",
         "generation" : "markdown"
       },
       {

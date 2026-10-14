@@ -296,7 +296,7 @@
     "oids" : ["2.16.840.1.113883.18.36"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.1.0/ValueSet-v2-0092.html" : "hl7VS-re-admissionIndicator"
+    "http://terminology.hl7.org/7.4.0/ValueSet-v2-0092.html" : "hl7VS-re-admissionIndicator"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
@@ -321,9 +321,9 @@
     "oids" : ["2.16.840.1.113883.18.108"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType",
     "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-identifier-type.html" : "FR Core ValueSet Patient identifier type",
-    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type"
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type",
+    "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v2-0276",
@@ -335,11 +335,11 @@
     "oids" : ["2.16.840.1.113883.18.169"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.1.0/ValueSet-v2-0276.html" : "hl7VS-appointmentReasonCodes"
+    "http://terminology.hl7.org/7.4.0/ValueSet-v2-0276.html" : "hl7VS-appointmentReasonCodes"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-    "version" : "10.0.0",
+    "version" : "11.0.0",
     "status" : "active",
     "name" : "ActCode",
     "title" : "ActCode",
@@ -347,11 +347,11 @@
     "oids" : ["2.16.840.1.113883.5.4"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode"
+    "http://terminology.hl7.org/7.4.0/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-    "version" : "4.0.0",
+    "version" : "5.0.0",
     "status" : "active",
     "name" : "ActPriority",
     "title" : "ActPriority",
@@ -359,7 +359,7 @@
     "oids" : ["2.16.840.1.113883.5.7"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ActPriority.html" : "ActPriority"
+    "http://terminology.hl7.org/7.4.0/ValueSet-v3-ActPriority.html" : "ActPriority"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
@@ -375,7 +375,7 @@
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-    "version" : "4.0.0",
+    "version" : "5.0.0",
     "status" : "active",
     "name" : "MaritalStatus",
     "title" : "MaritalStatus",
@@ -395,12 +395,12 @@
     "oids" : ["2.16.840.1.113883.5.1008"],
     "uses" : {
     },
-    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-marital-status.html" : "FR Core ValueSet Patient gender INS ValueSet",
-    "http://hl7.org/fhir/R4/valueset-encounter-special-courtesy.html" : "Special courtesy"
+    "http://hl7.org/fhir/R4/valueset-encounter-special-courtesy.html" : "Special courtesy",
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-marital-status.html" : "FR Core ValueSet Patient gender INS ValueSet"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-    "version" : "6.0.0",
+    "version" : "7.0.0",
     "status" : "active",
     "name" : "ParticipationType",
     "title" : "ParticipationType",

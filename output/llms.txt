@@ -8,7 +8,9 @@
 * [Documentation](documentation.md)
 * [Modèle Editeur Abonnement](modeleEditeurAbo.md)
 * [Modèle Editeur Requête FHIR](modeleEditeurGet.md)
+* [Modèle Editeur Post actes](modeleEditeurPostActe.md)
 * [Modèle Etablissement](modeleEtab.md)
+* [Modèle Etablissement Get actes](modeleEtabGetAndDeleteActe.md)
 * [Téléchargement](other.md)
 
 ## Resources

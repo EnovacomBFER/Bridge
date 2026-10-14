@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Modèle Editeur Post actes - Guide D&#39;implementation Bridge v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+     <link href="assets/css/myTemplate.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+     <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.enovacom.com">
+               <img height="50" alt="Visit MyProject" src="assets/images/Enovacom_logo_horizontal_baseline_color@3x.jpg" />
+          </a>
+     </div>
+     <div id="family-nav">
+          <a id="family-logo" no-external="true" href="https://hl7.org/fhir/R4/index.html">
+               <img height="50" alt="Visit MyProject" src="assets/images/fhir-logo-www.png" />
+          </a>
+     </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide D&#39;implementation Bridge</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - trial-use
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li>
+    <a href="documentation.html">Documentation générale</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentation des services API Editeurs
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authentification.html">Authentification</a>
+      </li>
+      <li>
+        <a href="modeleEditeurGet.html">Requête FHIR</a>
+      </li>
+      <li>
+        <a href="modeleEditeurAbo.html">Abonnement</a>
+      </li>
+      <li>
+        <a href="modeleEditeurPostActe.html">Envoi des actes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentation des services API Etablissement
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="modeleEtab.html">Envoi</a>
+      </li>
+      <li>
+        <a href="modeleEtabGetAndDeleteActe.html">Récupération des actes</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="other.html">Téléchargement</a>
+      </li>
+      <li>
+        <a href="https://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a href="https://hl7.fr/ig/fhir/core/">FR Core</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Modèle Editeur Post actes</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guide D'implementation Bridge - version de développement local (intégration continue v1.1.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://enovacom.org/fhir/bridge/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
+  <h2>Modèle Editeur Post actes</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#réception-quotidienne-des-actes-en-json" id="markdown-toc-réception-quotidienne-des-actes-en-json">Réception quotidienne des actes en JSON</a>    <ul>
+      <li><a href="#présentation" id="markdown-toc-présentation">Présentation</a></li>
+      <li><a href="#en-têtes-http" id="markdown-toc-en-têtes-http">En-têtes HTTP</a></li>
+      <li><a href="#exemple-de-requête-avec-certificat" id="markdown-toc-exemple-de-requête-avec-certificat">Exemple de requête avec certificat</a></li>
+      <li><a href="#champs-obligatoires" id="markdown-toc-champs-obligatoires">Champs obligatoires</a></li>
+      <li><a href="#détail-des-paramètres" id="markdown-toc-détail-des-paramètres">Détail des paramètres</a>        <ul>
+          <li><a href="#acte-et-examen" id="markdown-toc-acte-et-examen">Acte et examen</a></li>
+          <li><a href="#patient" id="markdown-toc-patient">Patient</a></li>
+          <li><a href="#professionnel-réalisant-lacte" id="markdown-toc-professionnel-réalisant-lacte">Professionnel réalisant l’acte</a></li>
+        </ul>
+      </li>
+      <li><a href="#exemple-de-structure-de-données" id="markdown-toc-exemple-de-structure-de-données">Exemple de structure de données</a></li>
+      <li><a href="#exemple-de-structure-de-réponse" id="markdown-toc-exemple-de-structure-de-réponse">Exemple de structure de réponse</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="réception-quotidienne-des-actes-en-json">Réception quotidienne des actes en JSON</h1>
+
+<h2 id="présentation">Présentation</h2>
+
+<p>L’interface permet de transmettre quotidiennement des actes au format JSON via HTTPS.</p>
+
+<p><strong>Endpoint :</strong> POST /eai/request/BRIDGE/JSON_ACTE</p>
+
+<p><strong>URL :</strong> https://eie-bridge-recette.nd.care/eai/request/BRIDGE/JSON_ACTE</p>
+
+<p><strong>Paramètres :</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Description</th>
+      <th>Format</th>
+      <th>obligatoire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>finess</td>
+      <td>Finess géographique de l'établissement émetteur</td>
+      <td>Texte</td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>| Paramètre | Valeur |
+|—|—|
+| Méthode | <code class="language-plaintext highlighter-rouge">POST</code> |
+| Endpoint | <code class="language-plaintext highlighter-rouge">/eai/request/BRIDGE/JSON_ACTE</code> |
+| URL de recette | <code class="language-plaintext highlighter-rouge">https://eie-bridge-recette.nd.care |
+| Format | </code>application/json<code class="language-plaintext highlighter-rouge"> |
+| Authentification | Certificat client TLS |
+| Identification de l’établissement | En-tête </code>finess` |</p>
+
+<h2 id="en-têtes-http">En-têtes HTTP</h2>
+
+<p>La requête doit être envoyée avec un certificat client valide et les en-têtes suivants :</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Content-Type: application/json
+Accept: application/json
+finess: &lt;code FINESS de l'établissement&gt;
+</span></code></pre></div></div>
+
+<p>Le nom exact de l’en-tête FINESS est à confirmer si l’environnement utilise une autre convention.</p>
+
+<h2 id="exemple-de-requête-avec-certificat">Exemple de requête avec certificat</h2>
+
+<p>Exemple avec <code class="language-plaintext highlighter-rouge">curl</code> et des fichiers de certificat PEM :</p>
+
+<p><strong>Exemple de requête :</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">--request</span> POST <span class="se">\</span>
+  <span class="nt">--url</span> <span class="s2">"https://eie-bridge-recette.nd.care/eai/request//BRIDGE/JSON_ACTE</span><span class="sb">`</span><span class="s2">" </span><span class="se">\</span><span class="s2">
+  --cert client.crt </span><span class="se">\</span><span class="s2">
+  --key client.key </span><span class="se">\</span><span class="s2">
+  --header "</span>Content-Type: application/json<span class="s2">" </span><span class="se">\</span><span class="s2">
+  --header "</span>Accept: application/json<span class="s2">" </span><span class="se">\</span><span class="s2">
+  --header "</span>finess: 123456789<span class="s2">" </span><span class="se">\</span><span class="s2">
+  --data @acte.json
+</span></code></pre></div></div>
+
+<p>Si le certificat est fourni dans un fichier PKCS#12 (<code class="language-plaintext highlighter-rouge">.p12</code> ou <code class="language-plaintext highlighter-rouge">.pfx</code>), les options <code class="language-plaintext highlighter-rouge">curl</code> correspondantes peuvent varier selon la version et la configuration TLS.</p>
+
+<h2 id="champs-obligatoires">Champs obligatoires</h2>
+
+<p>Les champs suivants sont obligatoires dans le JSON transmis :</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">keyLetter</code></li>
+  <li><code class="language-plaintext highlighter-rouge">type</code></li>
+  <li><code class="language-plaintext highlighter-rouge">label</code></li>
+  <li><code class="language-plaintext highlighter-rouge">examTypeList</code></li>
+  <li><code class="language-plaintext highlighter-rouge">validityStartDate</code></li>
+</ul>
+
+<p>Ces champs décrivent la lettre clé et les examens associés. Les autres propriétés nécessaires à la création d’un acte sont détaillées ci-dessous.</p>
+
+<h2 id="détail-des-paramètres">Détail des paramètres</h2>
+
+<h3 id="acte-et-examen">Acte et examen</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Champ</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">examType</code></td>
+      <td>Examen type, référencé par son code. Exemples : <code class="language-plaintext highlighter-rouge">TLC</code>, <code class="language-plaintext highlighter-rouge">TLE</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">actRef</code></td>
+      <td>Lettre clé de codification de l’acte selon la NGAP. Exemples : <code class="language-plaintext highlighter-rouge">RQD</code>, <code class="language-plaintext highlighter-rouge">TE2</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">examName</code></td>
+      <td>Libellé ou nom de l’examen, par exemple le type de télédossier.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">realisationDate</code></td>
+      <td>Date et heure de réalisation de l’acte, en UTC.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">quantity</code></td>
+      <td>Nombre de kilomètres parcourus par le praticien. Si la valeur n’est pas renseignée, la valeur par défaut est <code class="language-plaintext highlighter-rouge">1</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">encounterId</code></td>
+      <td>Numéro de séjour du patient dans l’établissement où l’acte est réalisé.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">encounterClass</code></td>
+      <td>Classification du mode de prise en charge.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">status</code></td>
+      <td>Statut de l’acte.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">source</code></td>
+      <td>Identifiant contextuel permettant de retrouver la source à l’origine de l’acte, par exemple le numéro de rendez-vous.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="patient">Patient</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Champ</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patient.birthname</code></td>
+      <td>Nom de naissance.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patient.usual_name</code></td>
+      <td>Nom d’usage.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patient.given_name_list</code></td>
+      <td>Liste des prénoms de naissance.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patient.firstname</code></td>
+      <td>Premier prénom de naissance.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patient.usual_firstname</code></td>
+      <td>Prénom d’usage.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patient.birthdate</code></td>
+      <td>Date de naissance.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patient.birthplace</code></td>
+      <td>Code INSEE du lieu de naissance, sur 5 caractères.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patient.sex</code></td>
+      <td>Sexe codé <code class="language-plaintext highlighter-rouge">F</code>, <code class="language-plaintext highlighter-rouge">M</code> ou <code class="language-plaintext highlighter-rouge">O</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patient.multiple_birth_order</code></td>
+      <td>Ordre de naissance en cas de naissance multiple.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patient.identifiers</code></td>
+      <td>Liste d’identifiants contextuels, par exemple IPP, INS, RRI, numéro de sécurité sociale ou identifiant patient.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Un identifiant contextuel peut comporter les propriétés suivantes :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Champ</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">identifier</code></td>
+      <td>Valeur de l’identifiant.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">domain</code></td>
+      <td>Domaine de l’identifiant.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">assigner</code></td>
+      <td>Organisme émetteur.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">assignerURI</code></td>
+      <td>URI de l’organisme émetteur.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="professionnel-réalisant-lacte">Professionnel réalisant l’acte</h3>
+
+<p><code class="language-plaintext highlighter-rouge">performingPhysician</code> désigne le professionnel de santé réalisant l’acte. Pour un acte TLE, il s’agit du requis.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Champ</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">performingPhysician.firstname</code></td>
+      <td>Prénom du professionnel.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">performingPhysician.lastname</code></td>
+      <td>Nom du professionnel.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">performingPhysician.identifiers</code></td>
+      <td>Identifiants contextuels : RPPS, ADELI ou identifiant du Practice de l’utilisateur.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">performingPhysician.healthcareProvider</code></td>
+      <td>Établissement d’appartenance du professionnel.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">performingPhysician.healthcareService</code></td>
+      <td>Service du professionnel ; pour un acte TLE, il s’agit de la communauté.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>L’établissement (<code class="language-plaintext highlighter-rouge">healthcareProvider</code>) comprend :</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">name</code> : nom de l’établissement ;</li>
+  <li><code class="language-plaintext highlighter-rouge">identifiers</code> : identifiants contextuels, par exemple FINESS ou identifiant de l’annuaire.</li>
+</ul>
+
+<p>Le service (<code class="language-plaintext highlighter-rouge">healthcareService</code>) comprend :</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">name</code> : nom du service ;</li>
+  <li><code class="language-plaintext highlighter-rouge">identifiers</code> : identifiants contextuels de l’annuaire.</li>
+</ul>
+
+<h2 id="exemple-de-structure-de-données">Exemple de structure de données</h2>
+
+<p>L’exemple ci-dessous reprend la structure des objets attendus. Il s’agit d’un modèle à adapter : les valeurs <code class="language-plaintext highlighter-rouge">string</code> et <code class="language-plaintext highlighter-rouge">0</code> sont des exemples de types, pas nécessairement des valeurs métier valides.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"examType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TLC"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Téléconsultation"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"actRef"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"keyLetter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RQD"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"factor"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Libellé de l'acte"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description de l'acte"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"validityStartDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-06"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"validityEndDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-06"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"examName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Type du télédossier"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"realisationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-06T10:30:00Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"patient"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"birthname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DURAND"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"usual_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DURAND"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"given_name_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Camille"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Alex"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Camille"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"usual_firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Camille"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"birthdate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1980-01-15"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"birthplace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"75056"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"multiple_birth_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"identifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456789"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IPP"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Établissement"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"assignerURI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:example:etablissement"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"encounterId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEJOUR-12345"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"encounterClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ambulatoire"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in_progress"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"performingPhysician"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alex"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARTIN"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"identifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678901"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RPPS"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ANS"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"assignerURI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:example:ans"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"healthcareProvider"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Établissement de santé"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"identifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456789"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FINESS"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FINESS"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"assignerURI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:example:finess"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"healthcareService"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"identifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SERVICE-01"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Runtime"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Annuaire Runtime"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"assignerURI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:example:runtime"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CASE-12345"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nexus"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nexus"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"assignerURI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:example:nexus"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="exemple-de-structure-de-réponse">Exemple de structure de réponse</h2>
+
+<p>L’exemple suivant correspond à une structure de liste paginée. Il ne constitue pas un exemple de corps de requête à envoyer en <code class="language-plaintext highlighter-rouge">POST</code>.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"perPage"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"hasNext"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"hasPrevious"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"examType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"actRef"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"keyLetter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"factor"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"validityStartDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-06"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"validityEndDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-06"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"examName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"realisationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-06"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"patient"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"birthname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"usual_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"given_name_list"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"usual_firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"birthdate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-06"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"birthplace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"multiple_birth_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"identifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"assignerURI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"encounterId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"encounterClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in_progress"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"performingPhysician"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"healthcareProvider"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"identifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"assignerURI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"healthcareService"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"identifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"assignerURI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"identifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"assignerURI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"assigner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"assignerURI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://enovacom.com">Enovacom</a>.  Package EnovacomBridge#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 14, 2026 17:02+0200">2026-10-14</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://enovacom.org/fhir/bridge/StructureDefinition/enovacom-patient-creation-date | *Version*:1.1.0 |
-| Draft as of 2026-04-15 | *Computable Name*:PatientCreationDate |
+| Draft as of 2026-10-14 | *Computable Name*:PatientCreationDate |
 
 This extension allowos to know the patient's resource creation date .Extension permettant de connaître la date de création de la ressource Patient.
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-PatientCreationDate.
   "name" : "PatientCreationDate",
   "title" : "Extension Enovacom Patient Creation Date",
   "status" : "draft",
-  "date" : "2026-04-15T14:29:25+02:00",
+  "date" : "2026-10-14T17:02:42+02:00",
   "publisher" : "Enovacom",
   "contact" : [{
     "name" : "Enovacom",
