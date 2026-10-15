@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "EnovacomBridgeIG"] ; # 
   fhir:title [ fhir:v "Guide D'implementation Bridge"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-10-14T17:02:42+02:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-15T08:29:54+02:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Enovacom"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Enovacom" ] ;
@@ -1696,25 +1696,6 @@
            ] ;
            fhir:value [
              a fhir:Url ;
-             fhir:v "modeleEtab.html"^^xsd:anyURI ;
-             fhir:l fhir:modeleEtab.html
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:Url ;
-           fhir:v "modeleEtab.html"^^xsd:anyURI ;
-           fhir:l fhir:modeleEtab.html
-         ] ;
-         fhir:title [ fhir:v "Modèle Etablissement" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [
-             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
-             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
-           ] ;
-           fhir:value [
-             a fhir:Url ;
              fhir:v "modeleEditeurGet.html"^^xsd:anyURI ;
              fhir:l fhir:modeleEditeurGet.html
            ]
@@ -1763,6 +1744,25 @@
            fhir:l fhir:modeleEditeurPostActe.html
          ] ;
          fhir:title [ fhir:v "Modèle Editeur Post actes" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "modeleEtab.html"^^xsd:anyURI ;
+             fhir:l fhir:modeleEtab.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "modeleEtab.html"^^xsd:anyURI ;
+           fhir:l fhir:modeleEtab.html
+         ] ;
+         fhir:title [ fhir:v "Modèle Etablissement" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

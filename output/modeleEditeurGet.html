@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"5"}
-    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -106,10 +106,7 @@
         <a href="authentification.html">Authentification</a>
       </li>
       <li>
-        <a href="modeleEditeurGet.html">Requête FHIR</a>
-      </li>
-      <li>
-        <a href="modeleEditeurAbo.html">Abonnement</a>
+        <a href="modeleEditeurGet.html">Récupération des Identités/Séjours et des rendez-vous</a>
       </li>
       <li>
         <a href="modeleEditeurPostActe.html">Envoi des actes</a>
@@ -122,7 +119,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="modeleEtab.html">Envoi</a>
+        <a href="modeleEtab.html">Envoi des Identités/séjours et des rendez-vous</a>
       </li>
       <li>
         <a href="modeleEtabGetAndDeleteActe.html">Récupération des actes</a>
@@ -210,7 +207,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </ul>
   </li>
   <li><a href="#codes-derreur-de-retour-courants" id="markdown-toc-codes-derreur-de-retour-courants">Codes d'erreur de retour courants</a></li>
-  <li><a href="#notes-importantes" id="markdown-toc-notes-importantes">Notes importantes</a></li>
+  <li><a href="#notes-importantes" id="markdown-toc-notes-importantes">Notes importantes</a>    <ul>
+      <li><a href="#abonnement-patient-" id="markdown-toc-abonnement-patient-">Abonnement Patient :</a></li>
+      <li><a href="#abonnement-séjour-" id="markdown-toc-abonnement-séjour-">Abonnement Séjour :</a></li>
+      <li><a href="#abonnement-rendez-vous-" id="markdown-toc-abonnement-rendez-vous-">Abonnement Rendez-vous :</a></li>
+    </ul>
+  </li>
 </ul>
 
 </div>
@@ -662,6 +664,284 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
+<p>Les abonnements (subscriptions) en FHIR sont une fonctionnalité essentielle pour permettre une communication en temps réel entre les systèmes de santé. 
+Ils permettent à un système de s'abonner à des événements spécifiques, tels que la création, la mise à jour ou la suppression de ressources (par exemple, un patient).
+Lorsqu'un événement correspondant à l'abonnement se produit, une notification est automatiquement envoyée au système abonné, facilitant ainsi une réaction immédiate et une synchronisation efficace des données.</p>
+
+<h3 id="abonnement-patient-">Abonnement Patient :</h3>
+<p>Cette souscription permet d'être alerté en temps réel lorsqu'un nouveau patient actif est créé dans le système, en envoyant une requête HTTP à l'endpoint spécifié. Cela facilite la gestion proactive des nouveaux patients.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c8168579-f4f5-499f-8e2a-399638080544"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"versionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-03-03T10:37:26.975+01:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#9cMzjJjtM5C2863R"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr-FR"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/patient-birthPlace"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"valueAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"22278"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAINT-BRIEUC"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAINT-BRIEUC"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"22000"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FRA"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"identityStatus"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VALI"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Identité validée"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-nationality"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"code"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:iso:std:iso:3166"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FRA"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">]</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"secondary"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INS-C"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Identifiant National de Santé Calculé"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:oid:1.2.250.1.213.1.4.2"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2250575256189"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INS-NIR"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NIR définitif"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:oid:1.2.250.1.213.1.4.8"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2250575256189"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usual"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v2-0203"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PI"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient internal identifier"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:oid:1.2.250.1.71.4.2.2.130000000.patient"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"545434415"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARGUERITE JEANNE YVETTE"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MME CONNAN MARGUERITE"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONNAN"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"MARGUERITE"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"MME"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usual"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MME LEGRAND JEANNE"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGRAND"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"JEANNE"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"MME"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"telecom"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0102030405"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"home"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"female"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"birthDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1918-05-16"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"maritalStatus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MME"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Married"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"managingOrganization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization/346f3566-1693-43d7-a1d1-1bc13d3675df"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FINEG"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FINESS d'entité géographique"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://finess.esante.gouv.fr"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"130000000"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Etablissement"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="abonnement-séjour-">Abonnement Séjour :</h3>
+<p>Cette souscription permet d'être alerté en temps réel lorsqu'un séjour est créé ou modifié avec un statut en cours ou planifié, en envoyant une requête HTTP à l'endpoint spécifié. Cela facilite la gestion proactive des séjours.</p>
+
+<p>Pour simplifier l'intégration dans les solutions logiciels tiers, le choix a été fait d'enrichir cette subscriptions avec les informations du patient.</p>
+
+<h3 id="abonnement-rendez-vous-">Abonnement Rendez-vous :</h3>
+<p>Cette souscription permet d'être alerté en temps réel lorsqu'un rendez-vous est créé (<em>booked</em>) ou avec un statut en attente (<em>pending</em>), en envoyant une requête HTTP à l'endpoint spécifié. Cela facilite la gestion proactive des rendez-vous.</p>
+
+<p>Pour simplifier l'intégration dans les solutions logiciels tiers, le choix a été fait d'enrichir cette subscriptions avec les informations du séjour et du patient.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Appointment"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02f078c7-edc3-4384-a756-a6b61d45d2b3"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"versionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-02-16T14:34:05.619+01:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#AOucJhu6LeiUSYrm"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr-FR"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generated"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"div"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div xmlns=</span><span class="se">\"</span><span class="s2">http://www.w3.org/1999/xhtml</span><span class="se">\"</span><span class="s2">&gt;Rendez-vous de TC ANESTHESIE TELECONSULTATION PROCTO CASTAGNARY prevu le 2026/03/05 a 10:40 pour le patient d'IPP 111351155&lt;/div&gt;"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usual"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INTRN"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Identifiant interne"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://EnovacomBridge.com/830000000/identifiers/appointment"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6923320"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"booked"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"serviceType"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://enovacom.org/fhir/CodeSystem/appointment-service-type-830000000"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TCANEPROCTC"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TC ANESTHESIE TELECONSULTATION PROCTO CASTAGNARY"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TC ANESTHESIE TELECONSULTATION PROCTO CASTAGNARY"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TC ANESTHESIE TELECONSULTATION PROCTO CASTAGNARY"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-03-05T10:40:00.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"minutesDuration"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FILAC Dr PROTHE C.12H15 LE 18/03 EN UCA"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"patientInstruction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FILAC Dr PROTHE C.12H15 LE 18/03 EN UCA"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"participant"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usual"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://EnovacomBridge.com/830000000/identifiers/location"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNKNOWN"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Salle"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/7f724278-8e95-4210-8840-54192a101cf2"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usual"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v2-0203"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PI"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient internal identifier"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">]</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://EnovacomBridge.com/830000000/identifiers/patient"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111351155"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
 
 
 </div>
@@ -680,7 +960,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://enovacom.com">Enovacom</a>.  Package EnovacomBridge#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 14, 2026 17:02+0200">2026-10-14</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://enovacom.com">Enovacom</a>.  Package EnovacomBridge#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 15, 2026 08:29+0200">2026-10-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

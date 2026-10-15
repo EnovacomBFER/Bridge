@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://enovacom.org/fhir/bridge/ImplementationGuide/EnovacomBridge | *Version*:1.1.0 |
-| Draft as of 2026-10-14 | *Computable Name*:EnovacomBridgeIG |
+| Draft as of 2026-10-15 | *Computable Name*:EnovacomBridgeIG |
 
 ### Introduction
 
@@ -48,6 +48,7 @@ Les syntaxes retenue sont le JSON et le XML pour la représentation des ressourc
 | :--- | :--- | :--- |
 | **Role** | **Nom** | **Organisation** |
 | Auteur | Georges-Alexandre CHASTIN | Enovacom |
+| Auteur | Marie-Pierre Lahmadi | Enovacom |
 | Auteur | Benjamin FERNANDEZ | Enovacom |
 
 
@@ -63,7 +64,7 @@ Les syntaxes retenue sont le JSON et le XML pour la représentation des ressourc
   "name" : "EnovacomBridgeIG",
   "title" : "Guide D'implementation Bridge",
   "status" : "draft",
-  "date" : "2026-10-14T17:02:42+02:00",
+  "date" : "2026-10-15T08:29:54+02:00",
   "publisher" : "Enovacom",
   "contact" : [{
     "name" : "Enovacom",
@@ -875,15 +876,6 @@ Les syntaxes retenue sont le JSON et le XML pour la représentation des ressourc
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "modeleEtab.html"
-        }],
-        "nameUrl" : "modeleEtab.html",
-        "title" : "Modèle Etablissement",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "modeleEditeurGet.html"
         }],
         "nameUrl" : "modeleEditeurGet.html",
@@ -906,6 +898,15 @@ Les syntaxes retenue sont le JSON et le XML pour la représentation des ressourc
         }],
         "nameUrl" : "modeleEditeurPostActe.html",
         "title" : "Modèle Editeur Post actes",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "modeleEtab.html"
+        }],
+        "nameUrl" : "modeleEtab.html",
+        "title" : "Modèle Etablissement",
         "generation" : "markdown"
       },
       {

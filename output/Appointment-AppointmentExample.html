@@ -106,10 +106,7 @@
         <a href="authentification.html">Authentification</a>
       </li>
       <li>
-        <a href="modeleEditeurGet.html">Requête FHIR</a>
-      </li>
-      <li>
-        <a href="modeleEditeurAbo.html">Abonnement</a>
+        <a href="modeleEditeurGet.html">Récupération des Identités/Séjours et des rendez-vous</a>
       </li>
       <li>
         <a href="modeleEditeurPostActe.html">Envoi des actes</a>
@@ -122,7 +119,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="modeleEtab.html">Envoi</a>
+        <a href="modeleEtab.html">Envoi des Identités/séjours et des rendez-vous</a>
       </li>
       <li>
         <a href="modeleEtabGetAndDeleteActe.html">Récupération des actes</a>
@@ -230,7 +227,7 @@
 
 
 
-  <div xml:lang="fr-FR" lang="fr-FR"><a name="AppointmentExample"> </a><a name="hcAppointmentExample"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Langue : fr-FR</p><p style="margin-bottom: 0px">Profils: <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-appointment.html">FR Core Appointment Profile</a>, <a href="StructureDefinition-appointment-enovacom-bridge.html">Enovacom Bridge Appointment Profile</a></p></div><p><b>identifier</b>: Identifiant interne/45789465&nbsp;(utilisation :&nbsp;usual,&nbsp;)</p><p><b>status</b>: Booked</p><p><b>serviceType</b>: <span title="Codes :{https://enovacom.org/ig/fhir/bridge/CodeSystem/enovacom-bridge-appointment-service-type BO222}">FRACTURE DU TIBIA</span></p><p><b>description</b>: FRACTURE DU TIBIA</p><p><b>start</b>: 2025-07-24 23:15:00+0000</p><p><b>end</b>: 2025-07-25 02:15:00+0000</p><p><b>minutesDuration</b>: 180</p><blockquote><p><b>participant</b></p><p><b>actor</b>: Salle (Identifier: <code>http://EnovacomBridge.com/{FinessGeo}/identifiers/location</code>/UNKNOWN&nbsp;(utilisation :&nbsp;usual,&nbsp;))</p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><a name="l432">​</a><b>actor</b>: <a href="Patient/99a25f60-d947-4b83-ac27-518f1766b96f">Patient/99a25f60-d947-4b83-ac27-518f1766b96f</a></p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><a name="l446">​</a><b>actor</b>: <a href="Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3">Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3</a></p><p><b>status</b>: Accepted</p></blockquote></div>
+  <div xml:lang="fr-FR" lang="fr-FR"><a name="AppointmentExample"> </a><a name="hcAppointmentExample"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Langue : fr-FR</p><p style="margin-bottom: 0px">Profils: <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-appointment.html">FR Core Appointment Profile</a>, <a href="StructureDefinition-appointment-enovacom-bridge.html">Enovacom Bridge Appointment Profile</a></p></div><p><b>identifier</b>: Identifiant interne/45789465&nbsp;(utilisation :&nbsp;usual,&nbsp;)</p><p><b>status</b>: Booked</p><p><b>serviceType</b>: <span title="Codes :{https://enovacom.org/ig/fhir/bridge/CodeSystem/enovacom-bridge-appointment-service-type BO222}">FRACTURE DU TIBIA</span></p><p><b>description</b>: FRACTURE DU TIBIA</p><p><b>start</b>: 2025-07-24 23:15:00+0000</p><p><b>end</b>: 2025-07-25 02:15:00+0000</p><p><b>minutesDuration</b>: 180</p><blockquote><p><b>participant</b></p><p><b>actor</b>: Salle (Identifier: <code>http://EnovacomBridge.com/{FinessGeo}/identifiers/location</code>/UNKNOWN&nbsp;(utilisation :&nbsp;usual,&nbsp;))</p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><a name="l426">​</a><b>actor</b>: <a href="Patient/99a25f60-d947-4b83-ac27-518f1766b96f">Patient/99a25f60-d947-4b83-ac27-518f1766b96f</a></p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><a name="l440">​</a><b>actor</b>: <a href="Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3">Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3</a></p><p><b>status</b>: Accepted</p></blockquote></div>
 
   
 
@@ -255,7 +252,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://enovacom.com">Enovacom</a>.  Package EnovacomBridge#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 14, 2026 17:02+0200">2026-10-14</span>
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://enovacom.com">Enovacom</a>.  Package EnovacomBridge#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 15, 2026 08:29+0200">2026-10-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://enovacom.org/fhir/bridge/SearchParameter/encounter-location-identifier | *Version*:1.1.0 |
-| Active as of 2026-10-14 | *Computable Name*:location-identifier |
+| Active as of 2026-10-15 | *Computable Name*:location-identifier |
 
  
 Paramètre de recherche pour récupérer une ressource Encounter par l'identifiant métier de la location (Unité d'hébergement ou de responsabilité médicale). 
@@ -26,7 +26,7 @@ Paramètre de recherche pour récupérer une ressource Encounter par l'identifia
   "version" : "1.1.0",
   "name" : "location-identifier",
   "status" : "active",
-  "date" : "2026-10-14T17:02:42+02:00",
+  "date" : "2026-10-15T08:29:54+02:00",
   "publisher" : "Enovacom",
   "contact" : [{
     "name" : "Enovacom",

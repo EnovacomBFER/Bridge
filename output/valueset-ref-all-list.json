@@ -54,11 +54,11 @@
     "sources" : ["2.16.840.1.113883.4.642.3.79"],
     "uses" : {
     },
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
     "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile",
     "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile",
-    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
-    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
-    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile",
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/diagnosis-role",
@@ -246,11 +246,11 @@
     "sources" : ["2.16.840.1.113883.4.642.3.57"],
     "uses" : {
     },
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
     "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile",
     "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile",
-    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
-    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
-    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile",
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -264,11 +264,11 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
     "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile",
     "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile",
-    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
-    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
-    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile",
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -372,11 +372,11 @@
     "sources" : ["2.16.840.1.113883.4.642.3.47"],
     "uses" : {
     },
+    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
     "StructureDefinition-encounter-visit-enovacom-bridge.html" : "Enovacom Bridge Encounter Visit Profile",
     "StructureDefinition-episodeOfCare-enovacom-bridge.html" : "Enovacom Bridge EpisodeOfCare Profile",
-    "StructureDefinition-practitioner-enovacom-bridge.html" : "Enovacom Bridge Practitioner Profile",
-    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile",
-    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile"
+    "StructureDefinition-patient-enovacom-bridge.html" : "Enovacom Bridge Patient Profile",
+    "StructureDefinition-appointment-enovacom-bridge.html" : "Enovacom Bridge Appointment Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/service-category",
