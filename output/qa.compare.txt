@@ -1,11 +1,11 @@
 EnovacomBridgeIG : Validation Results
 =========================================
 
-err = 47, warn = 46, info = 23
+err = 46, warn = 47, info = 23
 $--
 Generated $--. FHIR version $-- for EnovacomBridge#$-- (canonical = https://enovacom.org/fhir/bridge)
  Build Errors : 11 / 4 / 0
- C:\Users\bfernandez\Documents\IG\ig-bridge-main\ig-bridge-main\fsh-generated\resources\Appointment-AppointmentExample : 5 / 4 / 5
+ C:\Users\bfernandez\Documents\IG\ig-bridge-main\ig-bridge-main\fsh-generated\resources\Appointment-AppointmentExample : 4 / 5 / 5
  C:\Users\bfernandez\Documents\IG\ig-bridge-main\ig-bridge-main\fsh-generated\resources\Encounter-EncounterVisitExample : 12 / 11 / 9
  C:\Users\bfernandez\Documents\IG\ig-bridge-main\ig-bridge-main\fsh-generated\resources\EpisodeOfCare-EpisodeOfCareExample : 2 / 4 / 1
  C:\Users\bfernandez\Documents\IG\ig-bridge-main\ig-bridge-main\fsh-generated\resources\ImplementationGuide-EnovacomBridge : 0 / 1 / 1
@@ -24,23 +24,23 @@ Generated $--. FHIR version $-- for EnovacomBridge#$-- (canonical = https://enov
 </table>
 == n/a ==
 ERROR: EpisodeOfCare.identifier.type: The reference http://hl7.org/fhir/ValueSet/namingsystem-identifier-system-type could not be resolved
-ERROR: Appointment-AppointmentExample.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 233, column 1339: The link 'Patient/99a25f60-d947-4b83-ac27-518f1766b96f' for "Patient/99a25f60-d947-4b83-ac27-518f1766b96f" cannot be resolved
-ERROR: Appointment-AppointmentExample.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 233, column 1543: The link 'Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3' for "Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3" cannot be resolved
-ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/p/a at Line 233, column 959: The link 'Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7' for "Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7" cannot be resolved
-ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/p/a at Line 233, column 1091: The link 'EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7' for "EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7" cannot be resolved
-ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 233, column 1524: The link 'Practitioner/3ba92191-b334-4749-9bd8-1a85d3556ca6' for "IVANESCU CHASTANG" cannot be resolved
-ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 233, column 2247: The link 'Location/2ea92154-b334-4812-9ae7-1a85d3456er4' for "Unité d'hébergement" cannot be resolved
-ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 233, column 2397: The link 'Location/i5a89154-p264-4812-1ak7-1a85d344785p' for "Unité de responsabilité médicale" cannot be resolved
-ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/p/a at Line 233, column 2533: The link 'Organization/2jg92146-b642-4ae2-71m7-4l8m2345ed4j' for "Etablissement de rattachement" cannot be resolved
-ERROR: Patient-1c783afa-9981-4977-be63-8859f0a8fde5.html#/html/body/div/div/div/div/div/div/table/tr/td/ul/li/a at Line 233, column 1685: The link 'Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8' for "Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8" cannot be resolved
-ERROR: index.html#/html/body/div/div/div/div/div/div/img at Line 269, column 6: The image source '../input/images-source/ModelisationMetierBridge.png' cannot be resolved
+ERROR: Appointment-AppointmentExample.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 230, column 1339: The link 'Patient/99a25f60-d947-4b83-ac27-518f1766b96f' for "Patient/99a25f60-d947-4b83-ac27-518f1766b96f" cannot be resolved
+ERROR: Appointment-AppointmentExample.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 230, column 1543: The link 'Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3' for "Practitioner/86bf354a-5522-485c-8e8c-408f64b025c3" cannot be resolved
+ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/p/a at Line 230, column 959: The link 'Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7' for "Patient/ay747r1d-y7p9-35o9-p7b1-3j42d3586cp7" cannot be resolved
+ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/p/a at Line 230, column 1091: The link 'EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7' for "EpisodeOfCare/j4a58iy1-b3p7-42o9-9bd8-3j42d3586cp7" cannot be resolved
+ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 230, column 1524: The link 'Practitioner/3ba92191-b334-4749-9bd8-1a85d3556ca6' for "IVANESCU CHASTANG" cannot be resolved
+ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 230, column 2247: The link 'Location/2ea92154-b334-4812-9ae7-1a85d3456er4' for "Unité d'hébergement" cannot be resolved
+ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 230, column 2397: The link 'Location/i5a89154-p264-4812-1ak7-1a85d344785p' for "Unité de responsabilité médicale" cannot be resolved
+ERROR: Encounter-EncounterVisitExample.html#/html/body/div/div/div/div/div/div/p/a at Line 230, column 2533: The link 'Organization/2jg92146-b642-4ae2-71m7-4l8m2345ed4j' for "Etablissement de rattachement" cannot be resolved
+ERROR: Patient-1c783afa-9981-4977-be63-8859f0a8fde5.html#/html/body/div/div/div/div/div/div/table/tr/td/ul/li/a at Line 230, column 1685: The link 'Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8' for "Organization/2862b0fc-a188-4b64-b950-7cdd8b3814f8" cannot be resolved
+ERROR: index.html#/html/body/div/div/div/div/div/div/img at Line 266, column 6: The image source '../input/images-source/ModelisationMetierBridge.png' cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated\resources\Appointment-AppointmentExample.json ==
 WARNING: Appointment/AppointmentExample: Appointment.identifier[0].system: No definition could be found for URL value 'http://EnovacomBridge.com/{FinessGeo}/identifiers/appointment'
-ERROR: Appointment/AppointmentExample: Appointment.serviceType[0].coding[0]: java.net.SocketTimeoutException: timeout
+WARNING: Appointment/AppointmentExample: Appointment.serviceType[0].coding[0].system: A definition for CodeSystem 'https://enovacom.org/ig/fhir/bridge/CodeSystem/enovacom-bridge-appointment-service-type' could not be found, so the code cannot be validated
 WARNING: Appointment/AppointmentExample: Appointment.participant[0].actor.identifier.system: No definition could be found for URL value 'http://EnovacomBridge.com/{FinessGeo}/identifiers/location'
 ERROR: Appointment/AppointmentExample: Appointment.participant[1].actor: Unable to resolve resource with reference 'Patient/99a25f60-d947-4b83-ac27-518f1766b96f'
 WARNING: Appointment/AppointmentExample: Appointment.participant[1].actor.identifier.system: No definition could be found for URL value 'http://EnovacomBridge.com/{FinessGeo}/identifiers/patient'

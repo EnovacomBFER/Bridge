@@ -43,4 +43,5 @@ Les syntaxes retenue sont le JSON et le XML pour la représentation des ressourc
 
 |**Role**	|**Nom**	|**Organisation**
 |Auteur	|Georges-Alexandre CHASTIN	|Enovacom
-|Auteur |Benjamin FERNANDEZ|Enovacom
+|Auteur |Marie-Pierre Lahmadi       |Enovacom
+|Auteur |Benjamin FERNANDEZ         |Enovacom

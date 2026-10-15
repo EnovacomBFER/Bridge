@@ -10,7 +10,7 @@
   "name" : "EnovacomBridgeIG",
   "title" : "Guide D'implementation Bridge",
   "status" : "draft",
-  "date" : "2026-10-14T17:02:42+02:00",
+  "date" : "2026-10-15T08:29:54+02:00",
   "publisher" : "Enovacom",
   "contact" : [{
     "name" : "Enovacom",
@@ -822,15 +822,6 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "modeleEtab.html"
-        }],
-        "nameUrl" : "modeleEtab.html",
-        "title" : "Modèle Etablissement",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "modeleEditeurGet.html"
         }],
         "nameUrl" : "modeleEditeurGet.html",
@@ -853,6 +844,15 @@
         }],
         "nameUrl" : "modeleEditeurPostActe.html",
         "title" : "Modèle Editeur Post actes",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "modeleEtab.html"
+        }],
+        "nameUrl" : "modeleEtab.html",
+        "title" : "Modèle Etablissement",
         "generation" : "markdown"
       },
       {
