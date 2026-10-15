@@ -5,7 +5,7 @@
 
 ## Documentation
 
-Lers informations d'identité et de séjours transites en milieu hospitalié via des messages de type HL7v2.
+Lers informations d'identité et de séjours transites en milieu hospitalier via des messages de type HL7v2.
 
 Nous proposons dans ce guide des profils, basés sur Fr Core v2.1.0, permettant de modéliser la partie Identité, Mouvement, Séjour et Rendez-vous et de se rapprocher des éléments transportés en HL7v2 (profil PAM) dans les messages de type ADT.
 
